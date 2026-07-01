@@ -27,8 +27,8 @@
       ],
       "price_segment": "budget",
       "image_url": "https://s.a-5.ru/i/file/161/7/f2/d1/78b258598e74c673.jpg",
-      "image_local": "/data/products/2/main.jpg",
-      "image_thumb": "/data/products/2/thumb.jpg",
+      "image_local": "data/products/2/main.jpg",
+      "image_thumb": "data/products/2/thumb.jpg",
       "gallery": [
         "https://s.a-5.ru/i/file/161/7/f2/d1/78b258598e74c673.jpg",
         "https://s.a-5.ru/i/file/161/7/0a/e1/c25a8f30222c6b87.jpg",
@@ -71,8 +71,8 @@
       ],
       "price_segment": "mid",
       "image_url": "https://happygifts.ru/catalog-images/fc5f05b5-9798-11e2-914d-18a9053c0de9/photo/fc5f05b5-9798-11e2-914d-18a9053c0de9.jpg",
-      "image_local": "/data/products/3/main.jpg",
-      "image_thumb": "/data/products/3/thumb.jpg",
+      "image_local": "data/products/3/main.jpg",
+      "image_thumb": "data/products/3/thumb.jpg",
       "gallery": [
         "https://happygifts.ru/catalog-images/fc5f05b5-9798-11e2-914d-18a9053c0de9/photo/fc5f05b5-9798-11e2-914d-18a9053c0de9.jpg",
         "https://happygifts.ru/catalog-images/f8215d36-d913-11e4-9416-00155d640301/photo/f8215d36-d913-11e4-9416-00155d640301_1_20300.jpg",
@@ -115,8 +115,8 @@
       ],
       "price_segment": "premium",
       "image_url": "https://happygifts.ru/catalog-images/b3982475-760c-11ed-9634-00155da68a10/photo/b3982475-760c-11ed-9634-00155da68a10.jpg",
-      "image_local": "/data/products/4/main.jpg",
-      "image_thumb": "/data/products/4/thumb.jpg",
+      "image_local": "data/products/4/main.jpg",
+      "image_thumb": "data/products/4/thumb.jpg",
       "gallery": [
         "https://happygifts.ru/catalog-images/b3982475-760c-11ed-9634-00155da68a10/photo/b3982475-760c-11ed-9634-00155da68a10.jpg",
         "https://happygifts.ru/upload/iblock/b3f/пн3.png",
@@ -159,8 +159,8 @@
       ],
       "price_segment": "mid",
       "image_url": "https://happygifts.ru/catalog-images/f5f90a40-53be-11ee-9641-00155da68a11/photo/f5f90a40-53be-11ee-9641-00155da68a11.jpg",
-      "image_local": "/data/products/5/main.jpg",
-      "image_thumb": "/data/products/5/thumb.jpg",
+      "image_local": "data/products/5/main.jpg",
+      "image_thumb": "data/products/5/thumb.jpg",
       "gallery": [
         "https://happygifts.ru/catalog-images/f5f90a40-53be-11ee-9641-00155da68a11/photo/f5f90a40-53be-11ee-9641-00155da68a11.jpg",
         "https://happygifts.ru/catalog-images/f5f90a34-53be-11ee-9641-00155da68a11/photo/f5f90a34-53be-11ee-9641-00155da68a11_3_4.jpg",
@@ -203,8 +203,8 @@
       ],
       "price_segment": "premium",
       "image_url": "https://happygifts.ru/catalog-images/2e8d7148-5a30-11ef-966a-00155d41c408/photo/2e8d7148-5a30-11ef-966a-00155d41c408.jpg",
-      "image_local": "/data/products/6/main.jpg",
-      "image_thumb": "/data/products/6/thumb.jpg",
+      "image_local": "data/products/6/main.jpg",
+      "image_thumb": "data/products/6/thumb.jpg",
       "gallery": [
         "https://happygifts.ru/catalog-images/2e8d7148-5a30-11ef-966a-00155d41c408/photo/2e8d7148-5a30-11ef-966a-00155d41c408.jpg",
         "https://happygifts.ru/catalog-images/2e8d7141-5a30-11ef-966a-00155d41c408/photo/2e8d7141-5a30-11ef-966a-00155d41c408_4_Pocket.jpg",
@@ -247,8 +247,8 @@
       ],
       "price_segment": "premium",
       "image_url": "https://happygifts.ru/catalog-images/6d4ada53-80fb-11e7-942b-00155d640301/photo/6d4ada53-80fb-11e7-942b-00155d640301.jpg",
-      "image_local": "/data/products/7/main.jpg",
-      "image_thumb": "/data/products/7/thumb.jpg",
+      "image_local": "data/products/7/main.jpg",
+      "image_thumb": "data/products/7/thumb.jpg",
       "gallery": [
         "https://happygifts.ru/catalog-images/6d4ada53-80fb-11e7-942b-00155d640301/photo/6d4ada53-80fb-11e7-942b-00155d640301.jpg",
         "https://happygifts.ru/upload/iblock/b3f/пн3.png",
@@ -290,8 +290,8 @@
       ],
       "price_segment": "budget",
       "image_url": "https://happygifts.ru/catalog-images/6d71bcd3-0e03-11e7-942a-00155d640301/photo/6d71bcd3-0e03-11e7-942a-00155d640301.jpg",
-      "image_local": "/data/products/8/main.jpg",
-      "image_thumb": "/data/products/8/thumb.jpg",
+      "image_local": "data/products/8/main.jpg",
+      "image_thumb": "data/products/8/thumb.jpg",
       "gallery": [
         "https://happygifts.ru/catalog-images/6d71bcd3-0e03-11e7-942a-00155d640301/photo/6d71bcd3-0e03-11e7-942a-00155d640301.jpg"
       ],
@@ -325,8 +325,8 @@
       ],
       "price_segment": "mid",
       "image_url": "https://happygifts.ru/catalog-images/7a81af00-febc-11ed-963d-00155da68a11/photo/7a81af00-febc-11ed-963d-00155da68a11.jpg",
-      "image_local": "/data/products/9/main.jpg",
-      "image_thumb": "/data/products/9/thumb.jpg",
+      "image_local": "data/products/9/main.jpg",
+      "image_thumb": "data/products/9/thumb.jpg",
       "gallery": [
         "https://happygifts.ru/catalog-images/7a81af00-febc-11ed-963d-00155da68a11/photo/7a81af00-febc-11ed-963d-00155da68a11.jpg"
       ],
@@ -360,8 +360,8 @@
       ],
       "price_segment": "budget",
       "image_url": "https://www.oceangifts.ru/cmedia/500x500/media/images/catalog/00268/26868-12f19e277306c7f275305b1656d49197.jpg",
-      "image_local": "/data/products/10/main.jpg",
-      "image_thumb": "/data/products/10/thumb.jpg",
+      "image_local": "data/products/10/main.jpg",
+      "image_thumb": "data/products/10/thumb.jpg",
       "gallery": [
         "https://www.oceangifts.ru/cmedia/500x500/media/images/catalog/00268/26868-12f19e277306c7f275305b1656d49197.jpg"
       ],
