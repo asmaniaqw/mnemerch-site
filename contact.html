@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакты — mnemerch</title>
+<meta name="description" content="Свяжитесь с нами: +7 (908) 219-88-00, Telegram, WhatsApp. Брендирование корпоративного мерча в Красноярске, ул. Свердловская, 3Д.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="/" class="logo"><span class="logo-mark">M</span> mnemerch <small>— мерч с&nbsp;логотипом</small></a>
+    <nav class="nav">
+      <a href="/catalog.html">Каталог</a>
+      <a href="/methods.html">Методы печати</a>
+      <a href="/portfolio.html">Портфолио</a>
+      <a href="/about.html">О компании</a>
+      <a href="/blog/">Блог</a>
+      <a href="/contact.html" class="nav-cta">Связаться</a>
+    </nav>
+    <div class="header-contacts">
+      <a href="https://t.me/Tatyana_Arzamastceva" aria-label="Telegram">✈️</a>
+      <a href="https://wa.me/79082198800" aria-label="WhatsApp">💬</a>
+      <a href="tel:+79082198800" class="phone">+7 (908) 219-88-00</a>
+    </div>
+    <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-header">
+  <div class="breadcrumbs" style="justify-content:center;">
+    <a href="/">Главная</a><span>/</span><span>Контакты</span>
+  </div>
+  <h1>Свяжитесь <em>с нами</em></h1>
+  <p>Ответим на вопросы, подберём товары, подготовим КП с мокапами за 2 часа</p>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <form class="anim" onsubmit="return submitContact(event)" style="background:#fff;border:1px solid var(--border);border-radius:20px;padding:36px;">
+        <h3 style="font-size:20px;font-weight:700;margin-bottom:20px;">Оставьте заявку</h3>
+        <div class="form-group"><label>Ваше имя</label><input type="text" placeholder="Имя" id="cName" required></div>
+        <div class="form-group"><label>Телефон</label><input type="tel" placeholder="+7 (___) ___-__-__" id="cPhone" required></div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="email@company.ru" id="cEmail"></div>
+        <div class="form-group"><label>Опишите задачу</label><textarea placeholder="Что нужно, бюджет, тираж, сроки — любая информация поможет нам подготовить точный расчёт" id="cMsg"></textarea></div>
+        <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center;">Отправить →</button>
+        <p style="font-size:12px;color:var(--text-light);margin-top:10px;">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
+      </form>
+      <div class="contact-info anim d2">
+        <h3 style="font-size:22px;font-weight:800;margin-bottom:20px;">Наши контакты</h3>
+        <a href="tel:+79082198800" style="font-size:18px;font-weight:700;color:var(--text);">📞 +7 (908) 219-88-00</a>
+        <a href="mailto:art-media24@yandex.ru">✉️ art-media24@yandex.ru</a>
+        <a href="https://t.me/Tatyana_Arzamastceva">✈️ Telegram: @Tatyana_Arzamastceva</a>
+        <a href="https://wa.me/79082198800">💬 WhatsApp: +7 (908) 219-88-00</a>
+        <div class="address" style="margin-top:24px;">
+          <strong style="font-size:16px;color:var(--text);">📍 Красноярск</strong><br>
+          ул. Свердловская, 3Д<br>
+          Будни с 9:00 до 18:00<br><br>
+          <div style="background:var(--accent-light);border-radius:12px;padding:16px;border:1px solid rgba(212,163,115,0.15);font-size:13px;">
+            💡 <strong>Совет:</strong> Подготовим 3 варианта расчёта: эконом / оптимум / премиум — с мокапами вашего логотипа. Пришлите техзадание — ответим за 3 часа.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="section-inner text-center">
+    <div class="section-tag anim" style="justify-content:center;"><span></span>FAQ</div>
+    <h2 class="section-title anim d1">Часто задаваемые <em>вопросы</em></h2>
+    <div style="max-width:720px;margin:0 auto;text-align:left;" class="anim d2">
+      <div class="faq-item" style="background:#fff;border:1px solid var(--border);border-radius:16px;margin-bottom:10px;overflow:hidden;">
+        <button onclick="toggleFAQ(this)" style="width:100%;padding:18px 22px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:600;text-align:left;font-family:inherit;color:var(--text);">Как сделать заказ? <span style="font-size:18px;transition:transform 0.3s;">+</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.3s;padding:0 22px;">
+          <p style="padding-bottom:18px;font-size:14px;color:var(--text-muted);line-height:1.6;">Оставьте заявку на сайте, в Telegram или позвоните. Мы уточним детали, подберём товары и подготовим КП с мокапами за 2 часа. После утверждения запускаем заказ в работу.</p>
+        </div>
+      </div>
+      <div class="faq-item" style="background:#fff;border:1px solid var(--border);border-radius:16px;margin-bottom:10px;overflow:hidden;">
+        <button onclick="toggleFAQ(this)" style="width:100%;padding:18px 22px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:600;text-align:left;font-family:inherit;color:var(--text);">Какие сроки производства? <span style="font-size:18px;transition:transform 0.3s;">+</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.3s;padding:0 22px;">
+          <p style="padding-bottom:18px;font-size:14px;color:var(--text-muted);line-height:1.6;">Сроки зависят от сложности заказа. В среднем: ответ — 2 часа, утверждение макета — 1-2 дня, производство — от 7 рабочих дней. Срочные заказы обсуждаются индивидуально.</p>
+        </div>
+      </div>
+      <div class="faq-item" style="background:#fff;border:1px solid var(--border);border-radius:16px;margin-bottom:10px;overflow:hidden;">
+        <button onclick="toggleFAQ(this)" style="width:100%;padding:18px 22px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:600;text-align:left;font-family:inherit;color:var(--text);">Какая минимальная сумма заказа? <span style="font-size:18px;transition:transform 0.3s;">+</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.3s;padding:0 22px;">
+          <p style="padding-bottom:18px;font-size:14px;color:var(--text-muted);line-height:1.6;">Минимальная сумма заказа — 50 000 ₽. Минимальный тираж зависит от товара и метода нанесения (от 1 шт для DTF и лазерной гравировки до 500 шт для шелкографии).</p>
+        </div>
+      </div>
+      <div class="faq-item" style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+        <button onclick="toggleFAQ(this)" style="width:100%;padding:18px 22px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:600;text-align:left;font-family:inherit;color:var(--text);">Как получить КП с мокапами? <span style="font-size:18px;transition:transform 0.3s;">+</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.3s;padding:0 22px;">
+          <p style="padding-bottom:18px;font-size:14px;color:var(--text-muted);line-height:1.6;">Просто пришлите техзадание: что нужно, тираж, бюджет, сроки. Мы подготовим КП с реальными мокапами вашего логотипа на выбранных товарах — обычно за 2 часа.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;padding:60px 24px;text-align:center;">
+  <div class="section-inner">
+    <p style="font-size:12px;font-weight:600;color:var(--text-light);text-transform:uppercase;letter-spacing:2px;margin-bottom:20px;">Нам доверяют</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <span style="padding:8px 20px;background:var(--light-alt);border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:700;color:var(--text-light);">ГАЗПРОМ</span>
+      <span style="padding:8px 20px;background:var(--light-alt);border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:700;color:var(--text-light);">РЖД</span>
+      <span style="padding:8px 20px;background:var(--light-alt);border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:700;color:var(--text-light);">СБЕР</span>
+      <span style="padding:8px 20px;background:var(--light-alt);border:1px solid var(--border);border-radius:8px;font-size:12px;font-weight:700;color:var(--text-light);">VK</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div><div style="font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;">mnemerch</div><p style="font-size:14px;line-height:1.6;max-width:340px;">Подбор и брендирование корпоративного мерча. 3&nbsp;000+ товаров с&nbsp;ценами. Доставка по&nbsp;всей России.</p></div>
+    <div><h4>Каталог</h4><ul><li><a href="/catalog.html">Все товары</a></li><li><a href="/catalog.html">Одежда</a></li><li><a href="/catalog.html">Посуда</a></li><li><a href="/catalog.html">Промо</a></li><li><a href="/catalog.html">Электроника</a></li></ul></div>
+    <div><h4>Информация</h4><ul><li><a href="/methods.html">Методы печати</a></li><li><a href="/portfolio.html">Портфолио</a></li><li><a href="/about.html">О компании</a></li><li><a href="/blog/">Блог</a></li></ul></div>
+    <div><h4>Контакты</h4><ul><li><a href="tel:+79082198800">+7 (908) 219-88-00</a></li><li><a href="https://t.me/Tatyana_Arzamastceva">Telegram</a></li><li><a href="https://wa.me/79082198800">WhatsApp</a></li><li><a href="mailto:art-media24@yandex.ru">art-media24@yandex.ru</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 mnemerch</span><span><a href="/privacy.html">Политика конфиденциальности</a><span style="margin:0 8px;color:rgba(255,255,255,0.1);">·</span><span>Красноярск</span></span></div>
+</footer>
+
+<script src="/js/components.js"></script>
+<script>
+function submitContact(e) {
+  e.preventDefault();
+  var nm=document.getElementById('cName').value.trim();
+  var ph=document.getElementById('cPhone').value.trim();
+  if(!nm||!ph){alert('Заполните имя и телефон');return false}
+  fetch('/api/lead', {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({name:nm,phone:ph,email:document.getElementById('cEmail').value,message:document.getElementById('cMsg').value,source:'contact'})
+  }).catch(function(e){console.error(e)});
+  alert('Спасибо, '+nm+'! Мы свяжемся с вами в ближайшее время.');
+  e.target.reset(); return false;
+}
+function toggleFAQ(btn) {
+  var answer=btn.nextElementSibling;
+  var span=btn.querySelector('span');
+  if(answer.style.maxHeight==='0px'||!answer.style.maxHeight){
+    answer.style.maxHeight=answer.scrollHeight+100+'px'; span.style.transform='rotate(45deg)';
+  } else {
+    answer.style.maxHeight='0px'; span.style.transform='rotate(0deg)';
+  }
+}
+var ob=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('show')})},{threshold:0.06});
+document.querySelectorAll('.anim').forEach(function(el){ob.observe(el)});
+document.querySelector('.burger')?.addEventListener('click',function(){
+  var n=document.querySelector('.nav');var isOpen=n.style.display==='flex';
+  n.style.display=isOpen?'none':'flex';
+  if(!isOpen){Object.assign(n.style,{flexDirection:'column',position:'absolute',top:'68px',left:'0',right:'0',background:'rgba(250,249,247,0.98)',padding:'16px 24px',gap:'4px',zIndex:'999',borderBottom:'1px solid #f0efeb'})}
+});
+window.addEventListener('scroll',function(){document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
+</script>
+</body>
+</html>
