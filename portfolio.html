@@ -1,110 +1,199 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html>
+
+<html lang="ru">
+
 <head>
-<base href="/mnemerch-site/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Портфолио и кейсы — mnemerch</title>
-<meta name="description" content="Портфолио корпоративного мерча: 65+ проектов. Реальные кейсы с фото, цифрами и результатами. Работаем с 2014 года.">
-<meta property="og:title" content="Портфолио и кейсы — mnemerch">
-<meta property="og:description" content="65+ проектов корпоративного мерча с фото. DTF, сублимация, вышивка, шелкография.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header class="header" id="header">
-  <div class="header-inner">
-    <a href="" class="logo"><span class="logo-mark">M</span> mnemerch <small>— мерч с&nbsp;логотипом</small></a>
-    <nav class="nav">
-      <a href="catalog.html">Каталог</a>
-      <a href="methods.html">Методы печати</a>
-      <a href="portfolio.html">Портфолио</a>
-      <a href="about.html">О компании</a>
-      <a href="blog/">Блог</a>
-      <a href="contact.html" class="nav-cta">Связаться</a>
-    </nav>
-    <div class="header-contacts">
-      <a href="https://t.me/Tatyana_Arzamastceva" aria-label="Telegram">✈️</a>
-      <a href="https://wa.me/79082198800" aria-label="WhatsApp">💬</a>
-      <a href="tel:+79082198800" class="phone">+7 (908) 219-88-00</a>
-    </div>
-    <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<section class="page-header">
-  <div class="breadcrumbs" style="justify-content:center;">
-    <a href="">Главная</a><span>/</span><span>Портфолио</span>
-  </div>
-  <h1>Портфолио <em>и кейсы</em></h1>
-  <p>65+ проектов для российских компаний. Смотрите качество печати, оцените идеи.</p>
-</section>
-
-<section class="section section-alt">
-  <div class="section-inner">
-    <div class="section-tag anim" style="justify-content:center;"><span></span>Нам доверяют</div>
-    <h2 class="section-title anim d1" style="text-align:center;">Крупнейшие компании <em>выбирают нас</em></h2>
-    <div class="portfolio-grid anim d2">
-      <div class="portfolio-item"><span>ГАЗПРОМ</span></div>
-      <div class="portfolio-item anim d1"><span>РЖД</span></div>
-      <div class="portfolio-item anim d1"><span>СБЕР</span></div>
-      <div class="portfolio-item anim d2"><span>VK</span></div>
-      <div class="portfolio-item anim d2"><span>МТС</span></div>
-      <div class="portfolio-item anim d3"><span>ЯНДЕКС</span></div>
-      <div class="portfolio-item anim d3"><span>РОСАТОМ</span></div>
-      <div class="portfolio-item anim d4"><span>НОРНИКЕЛЬ</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-inner">
-    <div class="section-tag anim"><span></span>Наши работы</div>
-    <h2 class="section-title anim d1">Реальные проекты <em>с фото</em></h2>
-    <p class="section-sub anim d2">Каждый проект — результат командной работы. От идеи до готового тиража.</p>
-
-    <div class="case-grid" id="caseGrid">
-      <div class="case-loader" style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted);">Загрузка работ...</div>
-    </div>
-
-    <div class="load-more" id="loadMore" style="display:none;">
-      <button class="btn btn-outline" onclick="loadMore()">Показать ещё</button>
-      <span class="case-count" id="caseCount"></span>
-    </div>
-<div class="lightbox" id="caseLightbox">
-  <div class="lightbox-bg" onclick="closeLightbox()"></div>
-  <div class="lightbox-wrap">
-    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-    <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">&#8249;</button>
-    <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">&#8250;</button>
-    <div class="lightbox-img-wrap">
-      <img id="lightboxImg" src="" alt="">
-    </div>
+<base href="/mnemerch-site/">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Портфолио и кейсы — mnemerch</title>
+
+<meta name="description" content="Портфолио корпоративного мерча: 65+ проектов. Реальные кейсы с фото, цифрами и результатами. Работаем с 2014 года.">
+
+<meta property="og:title" content="Портфолио и кейсы — mnemerch">
+
+<meta property="og:description" content="65+ проектов корпоративного мерча с фото. DTF, сублимация, вышивка, шелкография.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+
+<header class="header" id="header">
+
+  <div class="header-inner">
+
+    <a href="" class="logo"><span class="logo-mark">M</span> mnemerch <small>— мерч с&nbsp;логотипом</small></a>
+
+    <nav class="nav">
+
+      <a href="catalog.html">Каталог</a>
+
+      <a href="methods.html">Методы печати</a>
+
+      <a href="portfolio.html">Портфолио</a>
+
+      <a href="about.html">О компании</a>
+
+      <a href="blog/">Блог</a>
+
+      <a href="contact.html" class="nav-cta">Связаться</a>
+
+    </nav>
+
+    <div class="header-contacts">
+
+      <a href="https://t.me/Tatyana_Arzamastceva" aria-label="Telegram">✈️</a>
+
+      <a href="https://wa.me/79082198800" aria-label="WhatsApp">💬</a>
+
+      <a href="tel:+79082198800" class="phone">+7 (908) 219-88-00</a>
+
+    </div>
+
+    <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+
+  </div>
+
+</header>
+
+
+
+<section class="page-header">
+
+  <div class="breadcrumbs" style="justify-content:center;">
+
+    <a href="">Главная</a><span>/</span><span>Портфолио</span>
+
+  </div>
+
+  <h1>Портфолио <em>и кейсы</em></h1>
+
+  <p>65+ проектов для российских компаний. Смотрите качество печати, оцените идеи.</p>
+
+</section>
+
+
+
+<section class="section section-alt">
+
+  <div class="section-inner">
+
+    <div class="section-tag anim" style="justify-content:center;"><span></span>Нам доверяют</div>
+
+    <h2 class="section-title anim d1" style="text-align:center;">Крупнейшие компании <em>выбирают нас</em></h2>
+
+    <div class="portfolio-grid anim d2">
+
+      <div class="portfolio-item"><span>ГАЗПРОМ</span></div>
+
+      <div class="portfolio-item anim d1"><span>РЖД</span></div>
+
+      <div class="portfolio-item anim d1"><span>СБЕР</span></div>
+
+      <div class="portfolio-item anim d2"><span>VK</span></div>
+
+      <div class="portfolio-item anim d2"><span>МТС</span></div>
+
+      <div class="portfolio-item anim d3"><span>ЯНДЕКС</span></div>
+
+      <div class="portfolio-item anim d3"><span>РОСАТОМ</span></div>
+
+      <div class="portfolio-item anim d4"><span>НОРНИКЕЛЬ</span></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section">
+
+  <div class="section-inner">
+
+    <div class="section-tag anim"><span></span>Кейсы и проекты</div>
+    <h2 class="section-title anim d1">Реальные проекты <em>с фото</em></h2>
+    <p class="section-sub anim d2">65+ проектов для российских компаний. Смотрите качество печати, оцените идеи.</p>
+    <div class="portfolio-carousel">
+      <div class="carousel-track" id="carouselTrack"></div>
+      <button class="carousel-btn carousel-prev" onclick="slideCarousel(-1)" aria-label="Предыдущий">‹</button>
+      <button class="carousel-btn carousel-next" onclick="slideCarousel(1)" aria-label="Следующий">›</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+    <div class="carousel-counter" id="carouselCounter"></div>
+  </div>
+</section>
+
+<div class="lightbox" id="caseLightbox">
+
+  <div class="lightbox-bg" onclick="closeLightbox()"></div>
+
+  <div class="lightbox-wrap">
+
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+
+    <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">&#8249;</button>
+
+    <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">&#8250;</button>
+
+    <div class="lightbox-img-wrap">
+
+      <img id="lightboxImg" src="" alt="">
+
+    </div>
+
     <div class="lightbox-thumbs" id="lightboxThumbs"></div>
     <div class="lightbox-case-info" id="lightboxCaseInfo"></div>
-    <div class="lightbox-counter" id="lightboxCounter"></div>
-  </div>
-</div>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <div><div style="font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;">mnemerch</div><p style="font-size:14px;line-height:1.6;max-width:340px;">Подбор и брендирование корпоративного мерча. 3&nbsp;000+ товаров с&nbsp;ценами. Доставка по&nbsp;всей России.</p></div>
-    <div><h4>Каталог</h4><ul><li><a href="catalog.html">Все товары</a></li><li><a href="catalog.html">Одежда</a></li><li><a href="catalog.html">Посуда</a></li><li><a href="catalog.html">Промо</a></li><li><a href="catalog.html">Электроника</a></li></ul></div>
-    <div><h4>Информация</h4><ul><li><a href="methods.html">Методы печати</a></li><li><a href="portfolio.html">Портфолио</a></li><li><a href="about.html">О компании</a></li><li><a href="blog/">Блог</a></li></ul></div>
-    <div><h4>Контакты</h4><ul><li><a href="tel:+79082198800">+7 (908) 219-88-00</a></li><li><a href="https://t.me/Tatyana_Arzamastceva">Telegram</a></li><li><a href="https://wa.me/79082198800">WhatsApp</a></li><li><a href="mailto:art-media24@yandex.ru"></a></li></ul></div>
-  </div>
-  <div class="footer-bottom"><span>&copy; 2026 mnemerch</span><span><a href="privacy.html">Политика конфиденциальности</a><span style="margin:0 8px;color:rgba(255,255,255,0.1);">·</span><span>Красноярск</span></span></div>
-</footer>
-
-<script src="js/components.js"></script>
-<script>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+
+  </div>
+
+</div>
+
+
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div><div style="font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;">mnemerch</div><p style="font-size:14px;line-height:1.6;max-width:340px;">Подбор и брендирование корпоративного мерча. 3&nbsp;000+ товаров с&nbsp;ценами. Доставка по&nbsp;всей России.</p></div>
+
+    <div><h4>Каталог</h4><ul><li><a href="catalog.html">Все товары</a></li><li><a href="catalog.html">Одежда</a></li><li><a href="catalog.html">Посуда</a></li><li><a href="catalog.html">Промо</a></li><li><a href="catalog.html">Электроника</a></li></ul></div>
+
+    <div><h4>Информация</h4><ul><li><a href="methods.html">Методы печати</a></li><li><a href="portfolio.html">Портфолио</a></li><li><a href="about.html">О компании</a></li><li><a href="blog/">Блог</a></li></ul></div>
+
+    <div><h4>Контакты</h4><ul><li><a href="tel:+79082198800">+7 (908) 219-88-00</a></li><li><a href="https://t.me/Tatyana_Arzamastceva">Telegram</a></li><li><a href="https://wa.me/79082198800">WhatsApp</a></li><li><a href="mailto:art-media24@yandex.ru"></a></li></ul></div>
+
+  </div>
+
+  <div class="footer-bottom"><span>&copy; 2026 mnemerch</span><span><a href="privacy.html">Политика конфиденциальности</a><span style="margin:0 8px;color:rgba(255,255,255,0.1);">·</span><span>Красноярск</span></span></div>
+
+</footer>
+
+
+
+<script src="js/components.js"></script>
+
+<script>
+
 var cases = [];
 var filteredCases = [];
-var visibleCount = 0;
-var perPage = 12;
+var carouselIdx = 0;
+
 var lightboxCaseIdx = -1;
 var lightboxImgIdx = 0;
 
@@ -118,62 +207,57 @@ async function loadPortfolio() {
     var d = await r.json();
     cases = d.cases || [];
     filteredCases = cases.slice();
-    renderGrid();
+    renderCarousel();
   } catch(e) {
     document.getElementById("caseGrid").innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted);">\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e</div>';
     console.error(e);
   }
 }
 
-function renderGrid() {
-  var grid = document.getElementById("caseGrid");
-  var show = filteredCases.slice(0, visibleCount || perPage);
-  visibleCount = show.length;
-  grid.innerHTML = show.map(function(c, i) {
+function renderCarousel() {
+  var track = document.getElementById("carouselTrack");
+  if (!track) return;
+  track.innerHTML = filteredCases.map(function(c, i) {
     var imgPath = "img/portfolio/thumbs/" + c.thumb;
-    var imgStyle = "width:100%;height:100%;object-fit:cover;position:absolute;inset:0;";
-    return '<div class="case-card anim' + (i ? " d" + Math.min(i, 3) : "") + '" onclick="openLightbox(' + i + ')" data-idx="' + i + '">' +
-      '<div class="case-card-img" style="aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--light-alt);">' +
-        '<img src="' + esc(imgPath) + '" alt="" loading="lazy" style="' + imgStyle + '">' +
-      '</div>' +
+    return '<div class="carousel-slide' + (i === 0 ? " active" : "") + '" data-idx="' + i + '" onclick="openLightbox(' + i + ')">' +
+      '<div class="carousel-img"><img src="' + esc(imgPath) + '" alt="" loading="' + (i < 3 ? "eager" : "lazy") + '"></div>' +
+      (c.client ? '<div class="carousel-label">' + esc(c.client) + (c.industry ? " \u00b7 " + esc(c.industry) : "") + '</div>' : "") +
     '</div>';
   }).join("");
 
-  var more = document.getElementById("loadMore");
-  if (visibleCount < filteredCases.length) {
-    more.style.display = "flex";
-  } else {
-    more.style.display = "none";
+  var dots = document.getElementById("carouselDots");
+  if (dots) {
+    dots.innerHTML = filteredCases.map(function(c, i) {
+      return '<span class="carousel-dot' + (i === 0 ? " active" : "") + '" onclick="goToSlide(' + i + ')"></span>';
+    }).join("");
   }
-  document.getElementById("caseCount").textContent = "\u041f\u043e\u043a\u0430\u0437\u0430\u043d\u043e " + visibleCount + " \u0438\u0437 " + filteredCases.length;
-  observeAnim();
+  updateCounters();
 }
 
-function loadMore() {
-  var grid = document.getElementById("caseGrid");
-  var remaining = filteredCases.slice(visibleCount);
-  var batch = remaining.slice(0, perPage);
-  batch.forEach(function(c, i) {
-    var imgPath = "img/portfolio/thumbs/" + c.thumb;
-    var div = document.createElement("div");
-    div.className = "case-card anim";
-    div.setAttribute("onclick", "openLightbox(" + (visibleCount + i) + ")");
-    div.innerHTML = '<div class="case-card-img" style="aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--light-alt);">' +
-      '<img src="' + esc(imgPath) + '" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"></div>';
-    grid.appendChild(div);
-  });
-  visibleCount += batch.length;
-  if (visibleCount >= filteredCases.length) {
-    document.getElementById("loadMore").style.display = "none";
-  }
-  document.getElementById("caseCount").textContent = "\u041f\u043e\u043a\u0430\u0437\u0430\u043d\u043e " + visibleCount + " \u0438\u0437 " + filteredCases.length;
-  observeAnim();
+function slideCarousel(dir) {
+  carouselIdx = (carouselIdx + dir + filteredCases.length) % filteredCases.length;
+  goToSlide(carouselIdx);
 }
 
-function applyFilters() {
+function goToSlide(idx) {
+  carouselIdx = idx;
+  document.querySelectorAll(".carousel-slide").forEach(function(s, i) { s.classList.toggle("active", i === idx); });
+  document.querySelectorAll(".carousel-dot").forEach(function(d, i) { d.classList.toggle("active", i === idx); });
+  var track = document.getElementById("carouselTrack");
+  var slide = track ? track.children[idx] : null;
+  if (slide) slide.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+  updateCounters();
+}
+
+function updateCounters() {
+  var el = document.getElementById("carouselCounter");
+  if (el) el.textContent = (carouselIdx + 1) + " / " + filteredCases.length;
+}
+
+function loadMore() {}function applyFilters() {
   filteredCases = cases.slice();
   visibleCount = 0;
-  renderGrid();
+  renderCarousel();
 }
 
 function preloadAround(idx, imgs) {
@@ -260,22 +344,38 @@ function closeLightbox() {
   document.getElementById("caseLightbox").classList.remove("open");
   document.body.style.overflow = "";
 }
-var cachedCases = cases;
-
-
+
+
+
+
+
 
 loadPortfolio();
-function observeAnim(){
-  var ob=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('show')})},{threshold:0.06});
-  document.querySelectorAll('.anim:not(.observed)').forEach(function(el){el.classList.add('observed');ob.observe(el)});
-}
-observeAnim();
-document.querySelector('.burger')?.addEventListener('click',function(){
-  var n=document.querySelector('.nav');var isOpen=n.style.display==='flex';
-  n.style.display=isOpen?'none':'flex';
-  if(!isOpen){Object.assign(n.style,{flexDirection:'column',position:'absolute',top:'68px',left:'0',right:'0',background:'rgba(250,249,247,0.98)',padding:'16px 24px',gap:'4px',zIndex:'999',borderBottom:'1px solid #f0efeb'})}
-});
-window.addEventListener('scroll',function(){document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
-</script>
-</body>
-</html>
+function observeAnim(){
+
+  var ob=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('show')})},{threshold:0.06});
+
+  document.querySelectorAll('.anim:not(.observed)').forEach(function(el){el.classList.add('observed');ob.observe(el)});
+
+}
+
+observeAnim();
+
+document.querySelector('.burger')?.addEventListener('click',function(){
+
+  var n=document.querySelector('.nav');var isOpen=n.style.display==='flex';
+
+  n.style.display=isOpen?'none':'flex';
+
+  if(!isOpen){Object.assign(n.style,{flexDirection:'column',position:'absolute',top:'68px',left:'0',right:'0',background:'rgba(250,249,247,0.98)',padding:'16px 24px',gap:'4px',zIndex:'999',borderBottom:'1px solid #f0efeb'})}
+
+});
+
+window.addEventListener('scroll',function(){document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
+
+</script>
+
+</body>
+
+</html>
+
