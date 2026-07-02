@@ -31,11 +31,127 @@
   "contactPoint": { "@type": "ContactPoint", "telephone": "+7-908-219-88-00", "contactType": "sales" }
 }
 </script>
+
+<style>
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.35);
+}
+.hero-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  max-width: 800px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.4s, transform 0.8s ease 0.4s;
+}
+.hero-slide.active .hero-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+.hero-text p {
+  font-size: 18px;
+}
+.hero-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.dot.active {
+  background: #fff;
+}
+@media (max-width: 768px) {
+  .hero-text h1 { font-size: 28px; }
+  .hero-text p { font-size: 15px; }
+  .hero-slider { height: 70vh; }
+}
+</style>
 </head>
 <body>
 
 <!-- Header -->
 <div id="header-placeholder"></div>
+
+<section class="hero-slider" id="heroSlider">
+  <div class="hero-slide active" style="background-image: url('img/slide1.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Замерим что угодно на чём угодно</h1>
+      <p>Подберём продукцию под задачу, бюджет и тираж. Подготовим КП и вариант нанесения.</p>
+    </div>
+  </div>
+  <div class="hero-slide" style="background-image: url('img/slide2.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Привезём сувенирную продукцию из Китая</h1>
+      <p>Широкий ассортимент, контроль качества, растаможка и доставка до вашего склада.</p>
+    </div>
+  </div>
+  <div class="hero-slide" style="background-image: url('img/slide3.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Соберём индивидуальные подарочные наборы</h1>
+      <p>От концепции до упаковки — разработаем и соберём наборы под ваш бюджет и задачу.</p>
+    </div>
+  </div>
+  <div class="hero-slide" style="background-image: url('img/slide4.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Вкусные подарки из Сибири, собранные с душой</h1>
+      <p>Натуральные сибирские продукты в стильной упаковке — запоминающийся подарок партнёрам.</p>
+    </div>
+  </div>
+  <div class="hero-dots">
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+    <span class="dot" data-slide="2"></span>
+    <span class="dot" data-slide="3"></span>
+  </div>
+</section>
+
 
 <!-- Hero -->
 <section class="hero">
@@ -432,11 +548,43 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   });
 });
 
-window.addEventListener('scroll', function() {
-  document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 10);
-});
 
 loadProducts();
+</script>
+<script>
+(function() {
+  var slides = document.querySelectorAll('#heroSlider .hero-slide');
+  var dots = document.querySelectorAll('#heroSlider .dot');
+  var current = 0;
+  var intervalTime = 5000;
+  var timer;
+
+  function showSlide(index) {
+    slides.forEach(function(s) { s.classList.remove('active'); });
+    dots.forEach(function(d) { d.classList.remove('active'); });
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    current = index;
+  }
+
+  function nextSlide() {
+    showSlide((current + 1) % slides.length);
+  }
+
+  function startAutoplay() {
+    timer = setInterval(nextSlide, intervalTime);
+  }
+
+  dots.forEach(function(dot) {
+    dot.addEventListener('click', function() {
+      clearInterval(timer);
+      showSlide(parseInt(this.dataset.slide));
+      startAutoplay();
+    });
+  });
+
+  startAutoplay();
+})();
 </script>
 </body>
 </html>

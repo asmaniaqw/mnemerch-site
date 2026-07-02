@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
 <base href="/mnemerch-site/">
@@ -17,25 +17,7 @@
 <body>
 
 <!-- Header -->
-<header class="header" id="header">
-  <div class="header-inner">
-    <a href="" class="logo"><span class="logo-mark">M</span> mnemerch <small>— мерч с&nbsp;логотипом</small></a>
-    <nav class="nav">
-      <a href="catalog.html">Каталог</a>
-      <a href="methods.html">Методы печати</a>
-      <a href="portfolio.html">Портфолио</a>
-      <a href="about.html">О компании</a>
-      <a href="blog/">Блог</a>
-      <a href="contact.html" class="nav-cta">Связаться</a>
-    </nav>
-    <div class="header-contacts">
-      <a href="https://t.me/Tatyana_Arzamastceva" aria-label="Telegram">✈️</a>
-      <a href="https://wa.me/79082198800" aria-label="WhatsApp">💬</a>
-      <a href="tel:+79082198800" class="phone">+7 (908) 219-88-00</a>
-    </div>
-    <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
-  </div>
-</header>
+<div id="header-placeholder"></div>
 
 <!-- Search hero -->
 <section class="search-hero">
@@ -75,7 +57,7 @@
     </div>
     <div class="filter-block filter-radio">
       <h3>Цена за шт.</h3>
-      <label><input type="radio" name="price" onchange="filterPrice(0,100)" checked> до 100 ₽</label>
+      <label><input type="radio" name="price" onchange="filterPrice(0,100)" > до 100 ₽</label>
       <label><input type="radio" name="price" onchange="filterPrice(100,300)"> 100–300 ₽</label>
       <label><input type="radio" name="price" onchange="filterPrice(300,1000)"> 300–1000 ₽</label>
       <label><input type="radio" name="price" onchange="filterPrice(1000,99999)"> от 1000 ₽</label>
@@ -252,15 +234,7 @@
 </section>
 
 <!-- Footer -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div><div style="font-size:18px;font-weight:800;color:#fff;margin-bottom:12px;">mnemerch</div><p style="font-size:14px;line-height:1.6;max-width:340px;">Подбор и брендирование корпоративного мерча. 3&nbsp;000+ товаров с&nbsp;ценами. Доставка по&nbsp;всей России.</p></div>
-    <div><h4>Каталог</h4><ul><li><a href="catalog.html">Все товары</a></li><li><a href="catalog.html">Одежда</a></li><li><a href="catalog.html">Посуда</a></li><li><a href="catalog.html">Промо</a></li></ul></div>
-    <div><h4>Информация</h4><ul><li><a href="methods.html">Методы печати</a></li><li><a href="portfolio.html">Портфолио</a></li><li><a href="about.html">О компании</a></li><li><a href="blog/">Блог</a></li></ul></div>
-    <div><h4>Контакты</h4><ul><li><a href="tel:+79082198800">+7 (908) 219-88-00</a></li><li><a href="https://t.me/Tatyana_Arzamastceva">Telegram</a></li><li><a href="https://wa.me/79082198800">WhatsApp</a></li><li><a href="mailto:art-media24@yandex.ru"></a></li></ul></div>
-  </div>
-  <div class="footer-bottom"><span>© 2026 mnemerch</span><span><a href="privacy.html">Политика конфиденциальности</a><span style="margin:0 8px;color:rgba(255,255,255,0.1);">·</span><span>Красноярск</span></span></div>
-</footer>
+<div id="footer-placeholder"></div>
 
 <script src="js/components.js"></script>
 <script src="js/quiz-selector.js"></script>
@@ -299,7 +273,7 @@ function renderCatalog(list) {
         '<div class="name">' + esc(p.name) + '</div>' +
         '<div class="art">' + esc(p.supplier) + '</div>' +
         '<div class="price">' + (p.price ? p.price + ' \u20BD <small>\u0437\u0430 \u0448\u0442.</small>' : '\u0426\u0435\u043D\u0430 \u043F\u043E \u0437\u0430\u043F\u0440\u043E\u0441\u0443') + '</div>' +
-        '<div class="meta"><span class="stock">' + esc(p.supplier) + '</span><button class="btn-request" onclick="location.href=\'/p/' + p.id + '\'">\u0417\u0430\u043F\u0440\u043E\u0441\u0438\u0442\u044C</button></div>' +
+        '<div class="meta"><button class="btn-request" onclick="location.href=\'/p/' + p.id + '.html'">\u0417\u0430\u043F\u0440\u043E\u0441\u0438\u0442\u044C</button></div>' +
       '</div>' +
     '</div>';
   }).join('');
@@ -354,6 +328,11 @@ function filterCat(cat,el) {
   var f=Array.isArray(t)?productsData.filter(function(p){return p.category&&t.some(function(x){return p.category.toLowerCase().includes(x);});}):productsData.filter(function(p){return p.category&&p.category.toLowerCase().includes(t);});
   renderCatalog(f);
 }
+function toggleStock() {
+  var cb = document.getElementById('stockOnly');
+  filterProducts();
+}
+
 function filterPrice(min,max) {
   var filtered = productsData.filter(function(p){ return p.price !== null && p.price >= min && p.price <= max; });
   renderCatalog(filtered);
