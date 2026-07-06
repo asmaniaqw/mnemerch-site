@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <base href="/mnemerch-site/">
@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Термокружка вакуумная CLICK, 400 мл — mnemerch</title>
 <meta name="description" content="Термокружки с нанесением логотипа оптом - Термокружка вакуумная CLICK, 400 мл черный по цене от 2079 руб. Артикул 46000. Тиражи от 10 шт., срок от 5 рабочих дней.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -88,27 +89,6 @@
 <script>
 let productsData = [];
 let currentProduct = null;
-
-async function loadProduct() {
-  const params = new URLSearchParams(window.location.search);
-  const id = parseInt(params.get('id')) || 0;
-  document.getElementById('pBreadcrumb').textContent = 'Загрузка...';
-  try {
-    const r = await fetch('data/products.json?t=' + Date.now());
-    const d = await r.json();
-    productsData = d.products || [];
-    const p = productsData.find(function(x) { return x.id === id; });
-    if (p) {
-      currentProduct = p;
-      renderProduct(p);
-    } else {
-      document.getElementById('pLoader').textContent = 'Товар не найден (ID: ' + id + ')';
-    }
-  } catch(e) {
-    document.getElementById('pLoader').textContent = 'Ошибка загрузки товара';
-    console.error(e);
-  }
-}
 
 function esc(s) {
   return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -228,7 +208,7 @@ function renderRelated(p) {
       '<img src="' + esc(img) + '" alt="' + esc(x.name) + '" loading="lazy" onerror="this.src=\'https://placehold.co/300x300/eee/999?text=No+Image\'">' +
       '</div><div class="product-body"><div class="name">' + esc(x.name) + '</div>' +
       '<div class="price">' + (x.price ? x.price + ' ₽' : 'По запросу') + '</div>' +
-      '<div class="meta"><button class="btn-request" onclick="location.href=\'/p/' + x.id + '.html'\'">Подробнее</button></div></div></div>';
+      '<div class="meta"><button class="btn-request" onclick="location.href=\'../p/' + x.id + '.html'\'">Подробнее</button></div></div></div>';
   }).join('');
   observeAnim();
 }

@@ -1,13 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <base href="/mnemerch-site/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Как выбрать мерч для новогодних корпоративных подарков — mnemerch</title>
-<meta name="description" content="Советы по выбору новогодних корпоративных подарков: бюджет, наполнение, сроки заказа, тренды. Брендирование мерча в Красноярске.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title id="pageTitle">Как выбрать мерч для новогодних корпоративных подарков — mnemerch</title>
+<meta name="description" id="pageDesc" content="Советы по выбору новогодних корпоративных подарков: бюджет, наполнение, сроки заказа, тренды. Брендирование мерча в Красноярске.">
+<meta property="og:title" id="ogTitle" content="Как выбрать мерч для новогодних корпоративных подарков — mnemerch">
+<meta property="og:description" id="ogDesc" content="Советы по выбору новогодних корпоративных подарков: бюджет, наполнение, сроки заказа, тренды.">
+<link rel="canonical" href="https://mnemerch.ru/blog/post.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:image" content="https://mnemerch.ru/og-image.jpg"><link rel="preconnect" href="https://fonts.googleapis.com">
+<meta property="og:image" content="https://mnemerch.ru/og-image.jpg"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,57 +20,25 @@
 <div id="header-placeholder"></div>
 
 <div class="breadcrumbs" style="max-width:var(--max-w-narrow);margin:84px auto 0;padding:16px 24px 0;">
-  <a href="">Главная</a><span>/</span><a href="blog/">Блог</a><span>/</span><span>Как выбрать мерч для новогодних корпоративных подарков</span>
+  <a href="">Главная</a><span>/</span><a href="blog/">Блог</a><span>/</span><span id="postBreadcrumb">Статья</span>
 </div>
 
 <section class="section" style="padding-top:24px;">
   <div class="container-narrow">
-    <article>
+    <div id="postLoader" style="text-align:center;padding:60px 24px;color:var(--text-muted);font-size:14px;">Загрузка статьи...</div>
+    <article id="postContent" style="display:none;">
       <div style="margin-bottom:32px;">
         <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
-          <span style="padding:3px 10px;border-radius:50px;background:var(--accent-light);font-size:11px;font-weight:600;color:var(--accent);">Подарки</span>
-          <span style="padding:3px 10px;border-radius:50px;background:var(--light-alt);font-size:11px;font-weight:600;color:var(--text-muted);">15 декабря 2025</span>
+          <span id="postCategory" style="padding:3px 10px;border-radius:50px;background:var(--accent-light);font-size:11px;font-weight:600;color:var(--accent);"></span>
+          <span id="postDate" style="padding:3px 10px;border-radius:50px;background:var(--light-alt);font-size:11px;font-weight:600;color:var(--text-muted);"></span>
         </div>
-        <h1 style="font-size:clamp(28px,3.5vw,42px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin-bottom:16px;">Как выбрать мерч для новогодних корпоративных подарков</h1>
-        <p style="font-size:16px;color:var(--text-muted);line-height:1.7;">Полный гайд по выбору новогодних подарков для сотрудников и партнёров: от бюджета до наполнения. С советами эксперта.</p>
+        <h1 id="postTitle" style="font-size:clamp(28px,3.5vw,42px);font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin-bottom:16px;"></h1>
+        <p id="postDesc" style="font-size:16px;color:var(--text-muted);line-height:1.7;"></p>
       </div>
 
-      <div style="aspect-ratio:16/9;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#d4a373,#f5f3ef);display:flex;align-items:center;justify-content:center;font-size:72px;margin-bottom:32px;">🎄</div>
+      <div id="postHero" style="aspect-ratio:16/9;border-radius:20px;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:72px;margin-bottom:32px;"></div>
 
-      <div style="font-size:16px;line-height:1.8;color:var(--text-muted);max-width:720px;">
-        <p style="margin-bottom:20px;">Новый год — главный сезон для корпоративного мерча. Сотрудники ждут подарков, партнёры — внимания, а бюджет уже утверждён. Как не ошибиться с выбором и уложиться в сроки?</p>
-
-        <h2 style="font-size:24px;font-weight:700;color:var(--text);margin:32px 0 16px;">1. Определите бюджет и тираж</h2>
-        <p style="margin-bottom:16px;">Начните с цифр: сколько человек нужно поздравить и какой бюджет на одного человека. От этого зависит наполнение подарка. Стандартные категории:</p>
-        <ul style="margin-bottom:20px;padding-left:20px;">
-          <li style="margin-bottom:8px;">• <strong>Эконом</strong> (до 1 000 ₽/чел) — брендированная кружка, ручка, блокнот, шопер</li>
-          <li style="margin-bottom:8px;">• <strong>Стандарт</strong> (1 000–3 000 ₽) — термокружка, пауэрбанк, ежедневник, набор для чая</li>
-          <li style="margin-bottom:8px;">• <strong>Премиум</strong> (от 3 000 ₽) — подарочный набор, худи, беспроводная зарядка, кожаный блокнот</li>
-        </ul>
-
-        <h2 style="font-size:24px;font-weight:700;color:var(--text);margin:32px 0 16px;">2. Учитывайте сроки</h2>
-        <p style="margin-bottom:16px;">Новогодний ажиотаж начинается в октябре. Оптимальные сроки заказа:</p>
-        <ul style="margin-bottom:20px;padding-left:20px;">
-          <li style="margin-bottom:8px;">• Сентябрь–октябрь — тендеры, согласование бюджетов</li>
-          <li style="margin-bottom:8px;">• Ноябрь — утверждение макетов, запуск производства</li>
-          <li style="margin-bottom:8px;">• 1–15 декабря — отгрузка и доставка</li>
-          <li style="margin-bottom:8px;">• После 15 декабря — только срочные заказы с доплатой</li>
-        </ul>
-
-        <h2 style="font-size:24px;font-weight:700;color:var(--text);margin:32px 0 16px;">3. Выберите наполнение</h2>
-        <p style="margin-bottom:16px;">Классический набор новогоднего подарка: сладкий подарок (конфеты, шоколад), брендированная кружка/термокружка, ежедневник на следующий год, ручка, открытка с поздравлением. Для премиум-сегмента добавляем плед, свечи, набор чая/<wbr>кофе, пауэрбанк.</p>
-
-        <h2 style="font-size:24px;font-weight:700;color:var(--text);margin:32px 0 16px;">4. Не забудьте про упаковку</h2>
-        <p style="margin-bottom:16px;">Упаковка — половина впечатления. Брендированная коробка с логотипом, крафтовый пакет, подарочная бумага — всё это усиливает эффект. Мокапы упаковки мы готовим бесплатно.</p>
-
-        <h2 style="font-size:24px;font-weight:700;color:var(--text);margin:32px 0 16px;">5. Тренды этого года</h2>
-        <p style="margin-bottom:16px;">Экологичность — многоразовые бутылки, шоперы из переработанных материалов. Технологии — беспроводные зарядки, умные блокноты. Персонализация — уникальный дизайн под компанию, а не шаблон.</p>
-
-        <div style="background:var(--light-alt);border-radius:16px;padding:24px;margin:32px 0;">
-          <p style="font-weight:600;color:var(--text);margin-bottom:8px;">💡 Совет от mnemerch</p>
-          <p>Закажите КП с мокапами уже сейчас — в пик сезона очереди на расчёт достигают 5-7 дней. Подготовим 3 варианта под ваш бюджет за 2 часа.</p>
-        </div>
-      </div>
+      <div id="postBody" style="font-size:16px;line-height:1.8;color:var(--text-muted);max-width:720px;"></div>
     </article>
   </div>
 </section>
@@ -75,17 +47,13 @@
   <div class="section-inner">
     <div class="section-tag anim"><span></span>Читайте также</div>
     <h2 class="section-title anim d1">Похожие <em>статьи</em></h2>
-    <div class="blog-grid">
-      <article class="blog-card anim"><div class="blog-img"><div style="width:100%;height:100%;background:linear-gradient(135deg,#1e293b,#d4a373);display:flex;align-items:center;justify-content:center;position:absolute;inset:0;font-size:48px;">⚠️</div></div><div class="blog-body"><div class="blog-meta">5 октября 2025 · Советы</div><h3>5 ошибок при заказе корпоративного мерча</h3><p>Как не переплатить и не получить брак.</p><a href="blog/post.html?id=1" class="blog-link">далее →</a></div></article>
-      <article class="blog-card anim d2"><div class="blog-img"><div style="width:100%;height:100%;background:linear-gradient(135deg,#10b981,#d4a373);display:flex;align-items:center;justify-content:center;position:absolute;inset:0;font-size:48px;">📈</div></div><div class="blog-body"><div class="blog-meta">20 сентября 2025 · Тренды</div><h3>Тренды корпоративного мерча 2026</h3><p>Что будет актуально в новом году.</p><a href="blog/post.html?id=2" class="blog-link">далее →</a></div></article>
-      <article class="blog-card anim d3"><div class="blog-img"><div style="width:100%;height:100%;background:linear-gradient(135deg,#ef4444,#d4a373);display:flex;align-items:center;justify-content:center;position:absolute;inset:0;font-size:48px;">💰</div></div><div class="blog-body"><div class="blog-meta">1 сентября 2025 · Калькуляция</div><h3>Как рассчитать бюджет на мерч</h3><p>Пошаговый план расчёта.</p><a href="blog/post.html?id=3" class="blog-link">далее →</a></div></article>
-    </div>
+    <div class="blog-grid" id="relatedGrid"></div>
   </div>
 </section>
 
 <section style="background:var(--dark);padding:60px 24px;text-align:center;">
   <div class="section-inner">
-    <h2 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:8px;">Нужен новогодний мерч?</h2>
+    <h2 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:8px;">Нужен корпоративный мерч?</h2>
     <p style="color:rgba(255,255,255,0.45);margin-bottom:24px;">Подберём подарки для вашей компании за 2 часа</p>
     <a href="contact.html" class="btn btn-primary">Получить расчёт →</a>
   </div>
@@ -94,15 +62,67 @@
 <div id="footer-placeholder"></div>
 
 <script src="js/components.js"></script>
+<script src="js/blog-posts.js"></script>
 <script>
-var ob=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('show')})},{threshold:0.06});
-document.querySelectorAll('.anim').forEach(function(el){ob.observe(el)});
+function esc(s){var d=document.createElement('div');d.textContent=(s===null||s===undefined)?'':String(s);return d.innerHTML;}
+
+var animObserver = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting) en.target.classList.add('show'); });
+}, {threshold:0.06});
+document.querySelectorAll('.anim').forEach(function(el){ animObserver.observe(el); });
+
 document.querySelector('.burger')?.addEventListener('click',function(){
   var n=document.querySelector('.nav');var isOpen=n.style.display==='flex';
   n.style.display=isOpen?'none':'flex';
   if(!isOpen){Object.assign(n.style,{flexDirection:'column',position:'absolute',top:'68px',left:'0',right:'0',background:'rgba(250,249,247,0.98)',padding:'16px 24px',gap:'4px',zIndex:'999',borderBottom:'1px solid #f0efeb'})}
 });
-window.addEventListener('scroll',function(){document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
+window.addEventListener('scroll',function(){document.querySelector('.header')?.classList.toggle('scrolled',window.scrollY>10)});
+
+function renderPost(id){
+  var posts = window.blogPosts || {};
+  var post = posts[id];
+  if(!post){ return; }
+
+  document.getElementById('pageTitle').textContent = post.title + ' — mnemerch';
+  document.getElementById('pageDesc').setAttribute('content', post.desc);
+  document.getElementById('ogTitle').setAttribute('content', post.title + ' — mnemerch');
+  document.getElementById('ogDesc').setAttribute('content', post.desc);
+
+  document.getElementById('postBreadcrumb').textContent = post.title;
+  document.getElementById('postCategory').textContent = post.category;
+  document.getElementById('postDate').textContent = post.date;
+  document.getElementById('postTitle').textContent = post.title;
+  document.getElementById('postDesc').textContent = post.desc;
+
+  var hero = document.getElementById('postHero');
+  hero.style.background = post.gradient;
+  hero.textContent = post.emoji;
+
+  document.getElementById('postBody').innerHTML = post.content;
+
+  var allIds = Object.keys(posts);
+  var relatedIds = allIds.filter(function(i){ return i !== id; }).slice(0,3);
+  var grid = document.getElementById('relatedGrid');
+  grid.innerHTML = relatedIds.map(function(rid, idx){
+    var rp = posts[rid];
+    var delayClass = idx > 0 ? (' d' + idx) : '';
+    return '<article class="blog-card anim' + delayClass + '">' +
+      '<div class="blog-img"><div style="width:100%;height:100%;background:' + rp.gradient + ';display:flex;align-items:center;justify-content:center;position:absolute;inset:0;font-size:48px;">' + rp.emoji + '</div></div>' +
+      '<div class="blog-body"><div class="blog-meta">' + esc(rp.date) + ' · ' + esc(rp.category) + '</div><h3>' + esc(rp.title) + '</h3><p>' + esc(rp.desc) + '</p><a href="blog/post.html?id=' + rid + '" class="blog-link">далее →</a></div>' +
+    '</article>';
+  }).join('');
+  grid.querySelectorAll('.anim').forEach(function(el){ animObserver.observe(el); });
+
+  document.getElementById('postLoader').style.display = 'none';
+  document.getElementById('postContent').style.display = 'block';
+}
+
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get('id');
+  if(!id || !(window.blogPosts && window.blogPosts[id])) id = '1';
+  renderPost(id);
+})();
 </script>
 
 </body>
