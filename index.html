@@ -159,21 +159,21 @@
 .hero-quick-links a:hover { color: #fff; text-decoration-color: var(--accent); }
 .hero-side-panel {
   position: absolute;
-  top: clamp(42px, 8vh, 86px);
-  right: clamp(-230px, -10vw, -120px);
-  width: clamp(260px, 22vw, 320px);
-  padding: 16px 16px 14px;
+  top: clamp(58px, 9vh, 96px);
+  right: clamp(-330px, -18vw, -260px);
+  width: clamp(360px, 23vw, 420px);
+  padding: 16px 18px 15px;
   border-radius: 22px;
   background:
-    linear-gradient(135deg, rgba(88, 34, 47, 0.62), rgba(180, 82, 105, 0.34)),
-    rgba(255,255,255,0.06);
+    linear-gradient(135deg, rgba(86, 31, 46, 0.58), rgba(183, 78, 105, 0.28)),
+    rgba(255,255,255,0.04);
   color: #fff;
   border: 1px solid rgba(255,255,255,0.22);
-  box-shadow: 0 18px 56px rgba(0,0,0,0.22);
+  box-shadow: 0 18px 56px rgba(0,0,0,0.20);
   backdrop-filter: blur(12px);
 }
 .hero-side-panel .panel-label {
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.74);
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
@@ -182,21 +182,21 @@
 }
 .hero-side-panel ul { display: grid; gap: 8px; }
 .hero-side-panel li {
-  display: grid;
-  grid-template-columns: 14px minmax(0, 1fr);
-  gap: 8px;
+  display: flex;
+  gap: 9px;
   align-items: flex-start;
   padding: 0;
   border-radius: 0;
   background: transparent;
   border: 0;
-  color: rgba(255,255,255,0.76);
-  font-size: 12px;
-  line-height: 1.35;
+  color: rgba(255,255,255,0.82);
+  font-size: 12.5px;
+  line-height: 1.42;
 }
-.hero-side-panel li b { color: #fff; font-weight: 800; }
-.hero-side-panel li::before { content: '✓'; color: var(--accent); font-weight: 900; }
-@media (max-width: 1180px) {
+.hero-side-panel li span { min-width: 0; }
+.hero-side-panel li b { color: #fff; font-weight: 800; white-space: nowrap; }
+.hero-side-panel li::before { content: '✓'; color: var(--accent); font-weight: 900; flex: 0 0 auto; }
+@media (max-width: 1500px) {
   .hero-side-panel { display: none; }
 }
 .hero-dots {
@@ -289,9 +289,9 @@
       <aside class="hero-side-panel" aria-label="Как мы работаем">
         <div class="panel-label">🔍 Как мы работаем</div>
         <ul>
-          <li><b>Оставляете заявку</b> — рассказываете, что нужно: товар, тираж и сроки.</li>
-          <li><b>Согласовываете макет</b> — готовим мокапы с логотипом и утверждаем детали.</li>
-          <li><b>Получаете заказ</b> — производим, проверяем качество и доставляем готовый мерч.</li>
+          <li><span><b>Оставляете заявку</b> — рассказываете, что нужно: товар, тираж и сроки.</span></li>
+          <li><span><b>Согласовываете макет</b> — готовим мокапы с логотипом и утверждаем детали.</span></li>
+          <li><span><b>Получаете заказ</b> — производим, проверяем качество и доставляем готовый мерч.</span></li>
         </ul>
       </aside>
     </div>
