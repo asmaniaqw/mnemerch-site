@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
 <base href="/mnemerch-site/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://asmaniaqw.github.io/mnemerch-site/catalog.html">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Каталог корпоративного мерча — mnemerch</title>
@@ -62,10 +64,6 @@
       <label><input type="radio" name="price" onchange="filterPrice(300,1000)"> 300–1000 ₽</label>
       <label><input type="radio" name="price" onchange="filterPrice(1000,99999)"> от 1000 ₽</label>
       <label><input type="radio" name="price" onchange="filterPrice(0,99999)"> Все</label>
-    </div>
-    <div class="filter-block filter-check">
-      <h3>Наличие</h3>
-      <label><input type="checkbox" id="stockOnly" checked onchange="toggleStock()"> Только в наличии</label>
     </div>
   </aside>
 
@@ -273,7 +271,7 @@ function renderCatalog(list) {
         '<div class="name">' + esc(p.name) + '</div>' +
         '<div class="art">' + esc(p.supplier) + '</div>' +
         '<div class="price">' + (p.price ? p.price + ' \u20BD <small>\u0437\u0430 \u0448\u0442.</small>' : '\u0426\u0435\u043D\u0430 \u043F\u043E \u0437\u0430\u043F\u0440\u043E\u0441\u0443') + '</div>' +
-        '<div class="meta"><button class="btn-request" onclick="location.href=\'p/' + p.id + '.html\'">\u0417\u0430\u043F\u0440\u043E\u0441\u0438\u0442\u044C</button></div>' +
+        '<div class="meta"><a class="btn-request" href="p/' + encodeURIComponent(p.id) + '.html">\u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0442\u044C</a></div>' +
       '</div>' +
     '</div>';
   }).join('');
@@ -316,44 +314,59 @@ function finishQ() {
   document.querySelectorAll('.quiz-step').forEach(function(e){e.classList.remove('active')});
   document.getElementById('qs5').classList.add('active'); document.getElementById('qProg').style.width='100%'; showQResult();
 }
-function filterCat(cat,el) {
-  document.querySelectorAll('.filter-cat a.active').forEach(function(a){a.classList.remove('active')});
-  if(el)el.classList.add('active');
-  document.querySelectorAll('.cat-pills span.active').forEach(function(s){s.classList.remove('active')});
-  document.querySelectorAll('.cat-pills span').forEach(function(s){if(s.textContent.trim()===(cat==='all'?'Все':cat))s.classList.add('active')});
-  var catDB={'\u041E\u0434\u0435\u0436\u0434\u0430':'\u0442\u0435\u043A\u0441\u0442\u0438\u043B\u044C','\u041F\u043E\u0441\u0443\u0434\u0430':['\u043A\u0440\u0443\u0436\u043A\u0438','\u0435\u0434\u0430','\u0431\u0443\u0442\u044B\u043B\u043A\u0438'],'Промо':'промо','Электроника':null,'\u0421\u0443\u043C\u043A\u0438':'\u0441\u0443\u043C\u043A\u0438','Офисная':'офис','\u041F\u043E\u0434\u0430\u0440\u043A\u0438':'\u043F\u043E\u0434\u0430\u0440\u043E\u0447\u043D\u044B\u0435'};
-  if(cat==='all'){renderCatalog(productsData);return;}
-  var t=catDB[cat];
-  if(!t){renderCatalog([]);return;}
-  var f=Array.isArray(t)?productsData.filter(function(p){return p.category&&t.some(function(x){return p.category.toLowerCase().includes(x);});}):productsData.filter(function(p){return p.category&&p.category.toLowerCase().includes(t);});
-  renderCatalog(f);
-}
-function toggleStock() {
-  var cb = document.getElementById('stockOnly');
-  filterProducts();
-}
+var catalogState = { cat: 'all', priceMin: null, priceMax: null, search: '', sort: '' };
+var catDB = {
+  'Одежда': 'текстиль',
+  'Посуда': ['кружки', 'еда', 'бутылки', 'посуда'],
+  'Промо': ['промо', 'ручки'],
+  'Сумки': ['сумки', 'рюкзак'],
+  'Офисная': ['офис', 'ручки'],
+  'Подарки': ['подарочные', 'подарки', 'плед']
+};
 
-function filterPrice(min,max) {
-  var filtered = productsData.filter(function(p){ return p.price !== null && p.price >= min && p.price <= max; });
-  renderCatalog(filtered);
+function getCatalogFiltered() {
+  var list = [].concat(productsData);
+  if (catalogState.cat && catalogState.cat !== 'all') {
+    var t = catDB[catalogState.cat];
+    list = list.filter(function(p) {
+      var hay = ((p.category || '') + ' ' + (p.subcategory || '') + ' ' + (p.name || '')).toLowerCase();
+      return Array.isArray(t) ? t.some(function(x){ return hay.includes(x); }) : hay.includes(t);
+    });
+  }
+  if (catalogState.priceMin !== null || catalogState.priceMax !== null) {
+    var min = catalogState.priceMin || 0;
+    var max = catalogState.priceMax || 999999;
+    list = list.filter(function(p){ return p.price !== null && p.price !== undefined && p.price >= min && p.price <= max; });
+  }
+  if (catalogState.search) {
+    var q = catalogState.search.toLowerCase();
+    list = list.filter(function(p){
+      return ((p.name || '') + ' ' + (p.category || '') + ' ' + (p.subcategory || '') + ' ' + (p.tags || []).join(' ')).toLowerCase().includes(q);
+    });
+  }
+  if (catalogState.sort === 'asc') list.sort(function(a,b){ return (a.price || 0) - (b.price || 0); });
+  if (catalogState.sort === 'desc') list.sort(function(a,b){ return (b.price || 0) - (a.price || 0); });
+  return list;
 }
-function filterSearch() {
-  var q=document.getElementById('searchInput').value.toLowerCase();
-  var filtered = productsData.filter(function(p){ return p.name.toLowerCase().includes(q); });
-  renderCatalog(filtered);
+function applyCatalogFilters() { renderCatalog(getCatalogFiltered()); }
+function filterCat(cat, el) {
+  catalogState.cat = cat;
+  document.querySelectorAll('.filter-cat a.active').forEach(function(a){ a.classList.remove('active'); });
+  if (el && el.tagName === 'A') el.classList.add('active');
+  document.querySelectorAll('.cat-pills span.active').forEach(function(s){ s.classList.remove('active'); });
+  document.querySelectorAll('.cat-pills span').forEach(function(s){ if (s.textContent.trim() === (cat === 'all' ? 'Все' : cat)) s.classList.add('active'); });
+  applyCatalogFilters();
 }
-function sortProducts(order) {
-  var sorted = [].concat(productsData);
-  if (order === 'asc') sorted.sort(function(a,b){return (a.price||0)-(b.price||0)});
-  else if (order === 'desc') sorted.sort(function(a,b){return (b.price||0)-(a.price||0)});
-  renderCatalog(sorted);
-}
+function toggleStock() { applyCatalogFilters(); }
+function filterPrice(min,max) { catalogState.priceMin = min; catalogState.priceMax = max; applyCatalogFilters(); }
+function filterSearch() { var inp = document.getElementById('searchInput'); catalogState.search = inp ? inp.value.trim() : ''; applyCatalogFilters(); }
+function sortProducts(order) { catalogState.sort = order || ''; applyCatalogFilters(); }
 function observeAnim(){
   var ob=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('show')})},{threshold:0.06});
   document.querySelectorAll('.anim:not(.observed)').forEach(function(el){el.classList.add('observed');ob.observe(el)});
 }
 observeAnim();
-window.addEventListener('scroll',function(){document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
+window.addEventListener('scroll',function(){(function(h){if(h)h.classList.toggle('scrolled',window.scrollY>10)})(document.querySelector('.header'))});
 function submitStrip() {
   var nm=document.getElementById('sName').value.trim();
   var ph=document.getElementById('sPhone').value.trim();

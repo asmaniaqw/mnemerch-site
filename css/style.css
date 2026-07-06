@@ -1108,3 +1108,49 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
   .carousel-prev { left: 4px; }
   .carousel-next { right: 4px; }
 }
+
+/* --- Production prep fixes / GitHub demo overrides --- */
+@media (max-width: 860px) {
+  body.nav-open { overflow: hidden; }
+  body.nav-open .nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    max-height: calc(100svh - var(--header-h));
+    overflow-y: auto;
+    padding: 18px 24px 24px;
+    gap: 6px;
+    z-index: 999;
+    background: rgba(250, 249, 247, 0.98);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  }
+  body.nav-open .nav a { width: 100%; padding: 12px 14px; }
+  .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .burger span { transition: transform 0.2s, opacity 0.2s; }
+  .hero-badges span:nth-child(n+3),
+  .hero-stats .hero-stat:nth-child(n+3),
+  .hero-stat:nth-child(3),
+  .hero-stat:nth-child(4) { display: block; }
+  .hero-badges span:nth-child(n+3) { display: inline-flex; }
+}
+@media (max-width: 520px) {
+  .hero-badges span:nth-child(n+2) { display: inline-flex; }
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .product-card .product-body { padding: 12px; }
+  .product-card .name { font-size: 13px; }
+  .product-card .price { font-size: 16px; }
+  .btn-request { width: 100%; text-align: center; justify-content: center; }
+}
+@media (max-width: 380px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
+.quiz-section-dark input::placeholder,
+.quiz-section-dark textarea::placeholder { color: rgba(255,255,255,0.58); }
+.quiz-section-dark input:focus,
+.quiz-section-dark textarea:focus { border-color: var(--accent); outline: none; }

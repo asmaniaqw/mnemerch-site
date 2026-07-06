@@ -50,28 +50,24 @@ function initBurgerMenu() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav');
   if (!burger || !nav) return;
-  // Guard: afterComponentsLoaded() runs for both header and footer,
-  // prevent double-binding (which makes the menu toggle twice per click)
   if (burger.dataset.bound === 'true') return;
   burger.dataset.bound = 'true';
+  burger.setAttribute('aria-expanded', 'false');
   burger.addEventListener('click', function () {
-    const isOpen = nav.style.display === 'flex';
-    nav.style.display = isOpen ? 'none' : 'flex';
-    if (!isOpen) {
-      Object.assign(nav.style, {
-        flexDirection: 'column',
-        position: 'absolute',
-        top: '68px',
-        left: '0',
-        right: '0',
-        background: 'rgba(250, 249, 247, 0.98)',
-        padding: '16px 24px',
-        gap: '4px',
-        zIndex: '999',
-        borderBottom: '1px solid #f0efeb',
-        boxShadow: '0 8px 24px rgba(0,0,0,0.04)'
-      });
-    }
+    const isOpen = document.body.classList.toggle('nav-open');
+    burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      document.body.classList.remove('nav-open');
+      burger.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!document.body.classList.contains('nav-open')) return;
+    if (e.target.closest('.nav') || e.target.closest('.burger')) return;
+    document.body.classList.remove('nav-open');
+    burger.setAttribute('aria-expanded', 'false');
   });
 }
 
@@ -145,3 +141,48 @@ function handleForm(formId, fields, successMsg) {
     return false;
   };
 }
+
+
+// --- Static GitHub Pages lead fallback ---
+// On GitHub Pages there is no backend endpoint. Forms that call fetch('api/lead')
+// are intercepted and opened as a pre-filled WhatsApp message instead of silently 404'ing.
+(function () {
+  const PHONE = '79082198800';
+  const nativeFetch = window.fetch ? window.fetch.bind(window) : null;
+
+  function buildLeadText(data) {
+    const labels = {
+      name: 'Имя', phone: 'Телефон', email: 'Email', message: 'Комментарий', source: 'Источник'
+    };
+    const lines = ['Здравствуйте! Хочу получить расчёт по мерчу.'];
+    Object.keys(data || {}).forEach(function (key) {
+      if (data[key] === undefined || data[key] === null || data[key] === '') return;
+      lines.push((labels[key] || key) + ': ' + data[key]);
+    });
+    return lines.join('\n');
+  }
+
+  window.submitMneLead = function (data) {
+    const text = buildLeadText(data || {});
+    const url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(text);
+    const opened = window.open(url, '_blank', 'noopener');
+    if (!opened) window.location.href = url;
+    return Promise.resolve({ ok: true, fallback: 'whatsapp' });
+  };
+
+  if (!nativeFetch) return;
+  window.fetch = function (input, init) {
+    const url = typeof input === 'string' ? input : (input && input.url) || '';
+    if (url.replace(/^\//, '') === 'api/lead') {
+      let data = {};
+      try { data = JSON.parse((init && init.body) || '{}'); } catch (e) {}
+      return window.submitMneLead(data).then(function () {
+        return new Response(JSON.stringify({ ok: true, fallback: 'whatsapp' }), {
+          status: 200,
+          headers: { 'Content-Type': 'application/json' }
+        });
+      });
+    }
+    return nativeFetch(input, init);
+  };
+})();

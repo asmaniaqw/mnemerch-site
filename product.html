@@ -1,7 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <base href="/mnemerch-site/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://asmaniaqw.github.io/mnemerch-site/product.html">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Кружка керамическая 330 мл — mnemerch</title>
@@ -10,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Кружка керамическая 330 мл","description":"Керамическая кружка для брендирования","sku":"KR-330-W","offers":{"@type":"Offer","price":"85","priceCurrency":"RUB","availability":"https://schema.org/InStock"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Кружка керамическая 330 мл","description":"Керамическая кружка для брендирования","sku":"KR-330-W","offers":{"@type":"Offer","price":"85","priceCurrency":"RUB","availability":"https://schema.org/InStock","url":"https://asmaniaqw.github.io/mnemerch-site/product.html","seller":{"@type":"Organization","name":"mnemerch","url":"https://asmaniaqw.github.io/mnemerch-site/"}},"url":"https://asmaniaqw.github.io/mnemerch-site/product.html","brand":{"@type":"Brand","name":"mnemerch"},"seller":{"@type":"Organization","name":"mnemerch","url":"https://asmaniaqw.github.io/mnemerch-site/"}}</script>
 </head>
 <body>
 
@@ -259,7 +261,7 @@ observeAnim();
 
 
 window.addEventListener('scroll', function() {
-  document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 10);
+  var h=document.querySelector('.header'); if(h) h.classList.toggle('scrolled', window.scrollY > 10);
 });
 
 loadProduct();

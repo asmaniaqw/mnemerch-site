@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
 <base href="/mnemerch-site/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://asmaniaqw.github.io/mnemerch-site/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>mnemerch — Корпоративный мерч с логотипом оптом в Красноярске</title>
@@ -10,7 +12,7 @@
 <meta property="og:title" content="mnemerch — Корпоративный мерч с логотипом">
 <meta property="og:description" content="Брендирование корпоративного мерча. 10 000 товаров с ценами, доставка по РФ.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://mnemerch.ru">
+<meta property="og:url" content="https://asmaniaqw.github.io/mnemerch-site">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,7 +23,7 @@
   "@type": "Organization",
   "name": "mnemerch",
   "url": "https://mnemerch.ru",
-  "logo": "https://mnemerch.ru/logo.png",
+  "logo": "https://asmaniaqw.github.io/mnemerch-site/logo.png",
   "description": "Подбор и брендирование корпоративного мерча и сувенирной продукции с логотипом.",
   "address": { "@type": "PostalAddress", "addressLocality": "Красноярск", "addressCountry": "RU" },
   "telephone": "+79082198800",
@@ -151,7 +153,7 @@
 <section class="section section-alt" id="portfolio">
   <div class="section-inner">
     <div class="section-tag anim"><span></span>Портфолио</div>
-    <h2 class="section-title anim d1">Нам доверяю�� <em>крупнейшие компании</em></h2>
+    <h2 class="section-title anim d1">Нам доверяют <em>крупнейшие компании</em></h2>
     <div class="portfolio-grid anim d2">
       <div class="portfolio-item"><span>ГАЗПРОМ</span></div>
       <div class="portfolio-item anim d1"><span>РЖД</span></div>
@@ -427,7 +429,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 });
 
 window.addEventListener('scroll', function() {
-  document.querySelector('.header').classList.toggle('scrolled', window.scrollY > 10);
+  var h=document.querySelector('.header'); if(h) h.classList.toggle('scrolled', window.scrollY > 10);
 });
 
 loadProducts();

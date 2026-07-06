@@ -1,7 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 <base href="/mnemerch-site/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://asmaniaqw.github.io/mnemerch-site/about.html">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>О компании — mnemerch</title>
@@ -103,7 +105,7 @@
 <script>
 var ob=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('show')})},{threshold:0.06});
 document.querySelectorAll('.anim').forEach(function(el){ob.observe(el)});
-window.addEventListener('scroll',function(){document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
+window.addEventListener('scroll',function(){(function(h){if(h)h.classList.toggle('scrolled',window.scrollY>10)})(document.querySelector('.header'))});
 </script>
 </body>
 </html>
