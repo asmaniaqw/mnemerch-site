@@ -158,19 +158,18 @@
 }
 .hero-quick-links a:hover { color: #fff; text-decoration-color: var(--accent); }
 .hero-side-panel {
-  position: relative;
-  top: auto;
-  right: auto;
-  width: min(100%, 400px);
-  justify-self: end;
-  align-self: start;
-  margin-top: clamp(26px, 7vh, 64px);
-  margin-right: clamp(18px, 2.5vw, 42px);
-  padding: 16px 18px;
+  position: absolute;
+  top: clamp(54px, 7vh, 96px);
+  right: calc(clamp(70px, 7vw, 130px) - max(0px, (100vw - var(--max-w)) / 2));
+  width: clamp(280px, 22vw, 330px);
+  justify-self: auto;
+  align-self: auto;
+  margin: 0;
+  padding: 15px 17px;
   border-radius: 22px;
   background:
-    linear-gradient(135deg, rgba(86, 31, 46, 0.58), rgba(183, 78, 105, 0.28)),
-    rgba(255,255,255,0.04);
+    linear-gradient(135deg, rgba(86, 31, 46, 0.62), rgba(183, 78, 105, 0.34)),
+    rgba(255,255,255,0.05);
   color: #fff;
   border: 1px solid rgba(255,255,255,0.22);
   box-shadow: 0 18px 56px rgba(0,0,0,0.20);
@@ -200,8 +199,8 @@
   background: transparent;
   border: 0;
   color: rgba(255,255,255,0.84);
-  font-size: 12.5px;
-  line-height: 1.45;
+  font-size: 12px;
+  line-height: 1.42;
 }
 .hero-side-panel li span { min-width: 0; }
 .hero-side-panel li b { color: #fff; font-weight: 800; white-space: normal; }
@@ -259,8 +258,8 @@
     gap: 34px;
   }
   .hero-side-panel {
-    width: 360px;
-    margin-right: 0;
+    width: 300px;
+    right: 56px;
   }
 }
 
@@ -273,6 +272,9 @@
     min-height: auto;
   }
   .hero-side-panel {
+    position: relative;
+    top: auto;
+    right: auto;
     display: block;
     justify-self: stretch;
     align-self: auto;
@@ -282,13 +284,14 @@
   }
 }
 @media (max-width: 640px) {
-  .hero-slider { min-height: auto; }
+  html, body { overflow-x: hidden; }
+  .hero-slider { min-height: auto; width: 100%; overflow: hidden; }
   .hero-slide {
     position: relative;
     min-height: auto;
     display: none;
     background-size: cover;
-    background-position: center top;
+    background-position: center center !important;
   }
   .hero-slide.active { display: flex; }
   .hero-slide-inner {
