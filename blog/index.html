@@ -73,11 +73,6 @@
 <script>
 var ob=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting)en.target.classList.add('show')})},{threshold:0.06});
 document.querySelectorAll('.anim').forEach(function(el){ob.observe(el)});
-document.querySelector('.burger')?.addEventListener('click',function(){
-  var n=document.querySelector('.nav');var isOpen=n.style.display==='flex';
-  n.style.display=isOpen?'none':'flex';
-  if(!isOpen){Object.assign(n.style,{flexDirection:'column',position:'absolute',top:'68px',left:'0',right:'0',background:'rgba(250,249,247,0.98)',padding:'16px 24px',gap:'4px',zIndex:'999',borderBottom:'1px solid #f0efeb'})}
-});
 window.addEventListener('scroll',function(){document.querySelector('.header').classList.toggle('scrolled',window.scrollY>10)});
 </script>
 </body>

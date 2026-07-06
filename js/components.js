@@ -4,8 +4,8 @@
 
 // --- Header / Footer Loading ---
 document.addEventListener('DOMContentLoaded', function () {
-  loadComponent('header-placeholder', '/components/header.html');
-  loadComponent('footer-placeholder', '/components/footer.html');
+  loadComponent('header-placeholder', 'components/header.html');
+  loadComponent('footer-placeholder', 'components/footer.html');
 });
 
 function loadComponent(id, url) {
@@ -21,8 +21,10 @@ function loadComponent(id, url) {
       afterComponentsLoaded();
     })
     .catch(() => {
-      // Fallback: inline header/footer if fetch fails (file:// protocol)
+      // Fallback: even if header/footer fail to load, init page behavior
+      // so .anim content is not stuck invisible
       el.outerHTML = '';
+      afterComponentsLoaded();
     });
 }
 
@@ -48,6 +50,10 @@ function initBurgerMenu() {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav');
   if (!burger || !nav) return;
+  // Guard: afterComponentsLoaded() runs for both header and footer,
+  // prevent double-binding (which makes the menu toggle twice per click)
+  if (burger.dataset.bound === 'true') return;
+  burger.dataset.bound = 'true';
   burger.addEventListener('click', function () {
     const isOpen = nav.style.display === 'flex';
     nav.style.display = isOpen ? 'none' : 'flex';
