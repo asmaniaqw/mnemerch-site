@@ -1635,3 +1635,81 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
   .branding-method-photos img,
   .branding-method-photos img:first-child { height: 120px; border-radius: 14px; }
 }
+
+/* --- Clients logos: always running marquee, not static list --- */
+.client-logo-marquee {
+  --logo-gap: 18px;
+  overflow: hidden;
+  position: relative;
+  padding: 12px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.client-logo-track {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  width: max-content !important;
+  gap: var(--logo-gap) !important;
+  animation: logoMarquee 32s linear infinite !important;
+  will-change: transform;
+}
+.client-logo-set {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  gap: var(--logo-gap) !important;
+}
+.client-logo-set[aria-hidden="true"] {
+  display: flex !important;
+}
+.client-logo-card {
+  flex: 0 0 174px !important;
+  min-height: 96px;
+  padding: 18px 22px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(44,44,44,0.08);
+  box-shadow: 0 12px 32px rgba(20,20,20,0.045);
+}
+.client-logo-card img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 62px;
+  object-fit: contain;
+}
+.client-logo-marquee:hover .client-logo-track,
+.client-logo-marquee:focus-within .client-logo-track {
+  animation-play-state: paused !important;
+}
+@media (max-width: 640px) {
+  .client-logo-marquee { --logo-gap: 12px; padding: 8px 0; }
+  .client-logo-track { animation-duration: 24s !important; }
+  .client-logo-card {
+    flex-basis: 136px !important;
+    min-height: 78px;
+    padding: 12px 14px;
+    border-radius: 18px;
+  }
+  .client-logo-card img { max-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .client-logo-marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  }
+  .client-logo-track {
+    animation: logoMarquee 48s linear infinite !important;
+    width: max-content !important;
+    justify-content: flex-start !important;
+  }
+  .client-logo-set {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+  }
+  .client-logo-set[aria-hidden="true"] { display: flex !important; }
+  .client-logo-card { flex: 0 0 174px !important; }
+}
