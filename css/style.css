@@ -1740,36 +1740,29 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
   }
 }
 
-/* --- Methods images from old site: keep full artwork visible --- */
-.branding-method-photos img {
-  object-fit: contain;
-  padding: 10px;
-  background: #fffaf4;
-}
-@media (min-width: 1025px) {
-  .branding-method-panel {
-    min-height: 0;
-  }
-}
-
-/* --- Emergency cleanup: method gallery must show normal real photos, not huge cropped SVG/cards --- */
+/* --- Final local photos for branding methods --- */
 .branding-method-photos {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 .branding-method-photos img,
 .branding-method-photos img:first-child {
   grid-row: auto !important;
   width: 100%;
-  height: 180px !important;
+  height: 260px !important;
   padding: 0 !important;
   object-fit: cover !important;
-  border-radius: 16px;
+  border-radius: 18px;
+  border: 1px solid var(--border-light);
   background: var(--light-alt);
 }
 @media (max-width: 768px) {
   .branding-method-photos { grid-template-columns: 1fr; }
   .branding-method-photos img,
-  .branding-method-photos img:first-child { height: 180px !important; }
+  .branding-method-photos img:first-child { height: 220px !important; }
+}
+@media (max-width: 520px) {
+  .branding-method-photos img,
+  .branding-method-photos img:first-child { height: 190px !important; }
 }
