@@ -1473,10 +1473,10 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
 /* --- Branding methods accordion/list --- */
 .branding-methods {
   display: grid;
-  grid-template-columns: minmax(260px, 360px) 1fr;
-  gap: 24px;
-  align-items: stretch;
-  margin-top: 34px;
+  grid-template-columns: minmax(250px, 330px) minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+  margin-top: 30px;
 }
 .branding-methods-list {
   display: flex;
@@ -1485,7 +1485,7 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
 }
 .branding-method-tab {
   width: 100%;
-  min-height: 54px;
+  min-height: 50px;
   border: 1px solid var(--border);
   border-radius: 16px;
   background: #fff;
@@ -1496,14 +1496,14 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
   text-align: left;
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px 18px;
+  gap: 12px;
+  padding: 12px 16px;
   cursor: pointer;
-  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
 }
 .branding-method-tab span {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: var(--accent-light);
   color: var(--accent);
@@ -1518,7 +1518,6 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
 .branding-method-tab.active {
   border-color: var(--accent);
   box-shadow: var(--shadow-sm);
-  transform: translateX(2px);
 }
 .branding-method-tab.active {
   background: var(--dark);
@@ -1528,21 +1527,20 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
   background: rgba(255,255,255,.14);
   color: #fff;
 }
-.branding-methods-content {
-  min-width: 0;
-}
+.branding-methods-content { min-width: 0; }
+.branding-method-panel[hidden] { display: none !important; }
 .branding-method-panel {
-  min-height: 0;
   border: 1px solid var(--border);
   border-radius: 24px;
   background: #fff;
   box-shadow: var(--shadow-sm);
-  padding: 28px;
+  padding: clamp(22px, 2.4vw, 34px);
   display: grid;
-  grid-template-columns: minmax(240px, .95fr) 1.05fr;
-  gap: 26px;
+  grid-template-columns: minmax(280px, .9fr) minmax(320px, 1fr);
+  gap: clamp(24px, 3vw, 42px);
   align-items: center;
 }
+.branding-method-copy { min-width: 0; }
 .branding-method-copy .eyebrow {
   color: var(--accent);
   font-size: 12px;
@@ -1553,87 +1551,78 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
   margin-bottom: 10px;
 }
 .branding-method-copy h3 {
-  font-size: clamp(24px, 3vw, 38px);
+  font-size: clamp(28px, 3vw, 42px);
   line-height: 1;
   font-weight: 800;
-  margin-bottom: 14px;
-}
-.branding-method-copy p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--text-muted);
   margin-bottom: 16px;
 }
-.branding-method-copy ul {
-  display: grid;
-  gap: 8px;
-  padding: 0;
+.branding-method-copy p {
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--text-muted);
+  max-width: 520px;
   margin: 0;
-  list-style: none;
-}
-.branding-method-copy li {
-  position: relative;
-  padding-left: 22px;
-  color: var(--text);
-  font-size: 14px;
-  line-height: 1.45;
-}
-.branding-method-copy li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: .58em;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
 }
 .branding-method-photos {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  position: relative;
+  min-height: 330px;
+  max-width: 520px;
+  width: 100%;
+  justify-self: center;
 }
 .branding-method-photos img {
-  width: 100%;
-  height: 170px;
+  position: absolute;
+  display: block;
+  width: 58%;
+  height: 230px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 22px;
   border: 1px solid var(--border-light);
   background: var(--light-alt);
+  box-shadow: 0 18px 40px rgba(20,20,20,.08);
 }
 .branding-method-photos img:first-child {
-  grid-row: span 2;
-  height: 350px;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
-@media (max-width: 1024px) {
+.branding-method-photos img:nth-child(2) {
+  right: 0;
+  bottom: 0;
+  width: 72%;
+  height: 220px;
+  z-index: 2;
+}
+@media (max-width: 1180px) {
   .branding-methods { grid-template-columns: 1fr; }
   .branding-methods-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .branding-method-tab { transform: none !important; }
-}
-@media (max-width: 768px) {
-  .branding-method-panel {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    border-radius: 20px;
-  }
-  .branding-method-photos img,
-  .branding-method-photos img:first-child {
-    height: 150px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 900px) {
+  .branding-methods-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .branding-method-panel { grid-template-columns: 1fr; }
+  .branding-method-photos { order: -1; max-width: 620px; min-height: 300px; }
+  .branding-method-copy p { max-width: none; }
+}
+@media (max-width: 620px) {
   .branding-methods { gap: 16px; margin-top: 24px; }
-  .branding-methods-list { grid-template-columns: 1fr; gap: 6px; }
+  .branding-methods-list { grid-template-columns: 1fr; gap: 7px; }
   .branding-method-tab { min-height: 48px; padding: 10px 12px; border-radius: 14px; font-size: 14px; }
   .branding-method-tab span { width: 30px; height: 30px; font-size: 11px; }
-  .branding-method-copy h3 { font-size: 26px; }
-  .branding-method-copy p { font-size: 14px; }
-  .branding-method-photos { gap: 8px; }
+  .branding-method-panel { padding: 18px; border-radius: 20px; gap: 18px; }
+  .branding-method-copy h3 { font-size: 28px; }
+  .branding-method-copy p { font-size: 14.5px; line-height: 1.58; }
+  .branding-method-photos { min-height: 0; display: grid; grid-template-columns: 1fr; gap: 10px; }
   .branding-method-photos img,
-  .branding-method-photos img:first-child { height: 120px; border-radius: 14px; }
+  .branding-method-photos img:first-child,
+  .branding-method-photos img:nth-child(2) {
+    position: static;
+    width: 100%;
+    height: 210px;
+    border-radius: 16px;
+  }
 }
 
 /* --- Clients logos: always running marquee, not static list --- */
