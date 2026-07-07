@@ -1755,3 +1755,51 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
   .branding-method-photos img,
   .branding-method-photos img:first-child { height: 190px !important; }
 }
+
+/* --- Methods photos: clean side-by-side layout, no overlapping --- */
+.branding-method-photos {
+  position: static !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+  max-width: 460px !important;
+  min-height: 0 !important;
+  justify-self: end !important;
+  align-self: center !important;
+}
+.branding-method-photos img,
+.branding-method-photos img:first-child,
+.branding-method-photos img:nth-child(2) {
+  position: static !important;
+  inset: auto !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  z-index: auto !important;
+  display: block !important;
+  width: 100% !important;
+  height: 250px !important;
+  transform: none !important;
+  object-fit: cover !important;
+  border-radius: 18px !important;
+  box-shadow: 0 14px 34px rgba(20,20,20,.08) !important;
+}
+@media (max-width: 900px) {
+  .branding-method-photos {
+    justify-self: stretch !important;
+    max-width: none !important;
+  }
+}
+@media (max-width: 620px) {
+  .branding-method-photos {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .branding-method-photos img,
+  .branding-method-photos img:first-child,
+  .branding-method-photos img:nth-child(2) {
+    height: 210px !important;
+  }
+}
