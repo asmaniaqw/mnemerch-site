@@ -1803,3 +1803,198 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
     height: 210px !important;
   }
 }
+
+/* --- Final polish: compact branding methods and two-row client logo marquee --- */
+@media (min-width: 1181px) {
+  .branding-methods {
+    grid-template-columns: minmax(390px, 440px) minmax(0, 1fr) !important;
+    gap: 18px !important;
+    margin-top: 24px !important;
+  }
+
+  .branding-methods-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+  }
+}
+
+.branding-method-tab {
+  min-height: 42px !important;
+  padding: 8px 12px !important;
+  border-radius: 14px !important;
+  gap: 10px !important;
+  font-size: 14px !important;
+}
+
+.branding-method-tab span {
+  width: 28px !important;
+  height: 28px !important;
+  font-size: 11px !important;
+}
+
+.branding-method-panel {
+  min-height: 0 !important;
+  padding: 24px 28px !important;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(340px, 1fr) !important;
+  gap: 24px !important;
+  align-items: center !important;
+}
+
+.branding-method-copy h3 {
+  font-size: clamp(30px, 2.4vw, 40px) !important;
+  margin-bottom: 12px !important;
+}
+
+.branding-method-copy p {
+  font-size: 15.5px !important;
+  line-height: 1.55 !important;
+  max-width: 440px !important;
+}
+
+.branding-method-photos {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  max-width: 440px !important;
+  justify-self: end !important;
+  align-self: center !important;
+  min-height: 0 !important;
+}
+
+.branding-method-photos img,
+.branding-method-photos img:first-child,
+.branding-method-photos img:nth-child(2) {
+  height: 210px !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 28px rgba(20,20,20,.07) !important;
+}
+
+@media (max-width: 1180px) {
+  .branding-methods-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .branding-method-panel {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .branding-method-photos {
+    justify-self: stretch !important;
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .branding-method-panel {
+    padding: 18px !important;
+  }
+
+  .branding-method-photos {
+    grid-template-columns: 1fr !important;
+  }
+
+  .branding-method-photos img,
+  .branding-method-photos img:first-child,
+  .branding-method-photos img:nth-child(2) {
+    height: 190px !important;
+  }
+}
+
+.client-logo-marquee.client-logo-marquee--two-rows {
+  --logo-gap: 22px;
+  overflow: hidden !important;
+  display: grid !important;
+  gap: 14px !important;
+  padding: 10px 0 !important;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent) !important;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent) !important;
+}
+
+.client-logo-row {
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.client-logo-marquee--two-rows .client-logo-track {
+  display: flex !important;
+  align-items: center !important;
+  width: max-content !important;
+  gap: var(--logo-gap) !important;
+  animation: logoMarqueeContinuous 62s linear infinite !important;
+  will-change: transform !important;
+}
+
+.client-logo-marquee--two-rows .client-logo-row--bottom .client-logo-track {
+  animation-duration: 70s !important;
+  animation-direction: reverse !important;
+}
+
+.client-logo-marquee--two-rows:hover .client-logo-track,
+.client-logo-marquee--two-rows:focus-within .client-logo-track {
+  animation-play-state: paused !important;
+}
+
+.client-logo-marquee--two-rows .client-logo-set {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  gap: var(--logo-gap) !important;
+}
+
+.client-logo-marquee--two-rows .client-logo-set[aria-hidden="true"] {
+  display: flex !important;
+}
+
+.client-logo-marquee--two-rows .client-logo-card {
+  flex: 0 0 150px !important;
+  min-height: 54px !important;
+  padding: 8px 18px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transform: none !important;
+}
+
+.client-logo-marquee--two-rows .client-logo-card img {
+  max-width: 100% !important;
+  max-height: 52px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  filter: none !important;
+}
+
+@keyframes logoMarqueeContinuous {
+  from { transform: translateX(0); }
+  to { transform: translateX(-25%); }
+}
+
+@media (max-width: 640px) {
+  .client-logo-marquee.client-logo-marquee--two-rows {
+    --logo-gap: 14px;
+    gap: 10px !important;
+  }
+
+  .client-logo-marquee--two-rows .client-logo-track {
+    animation-duration: 48s !important;
+  }
+
+  .client-logo-marquee--two-rows .client-logo-row--bottom .client-logo-track {
+    animation-duration: 54s !important;
+  }
+
+  .client-logo-marquee--two-rows .client-logo-card {
+    flex-basis: 124px !important;
+    min-height: 44px !important;
+    padding: 6px 12px !important;
+  }
+
+  .client-logo-marquee--two-rows .client-logo-card img {
+    max-height: 40px !important;
+  }
+}
