@@ -8,7 +8,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta name="robots" content="noindex, nofollow"/>
-<title>Вариант главной — крупная подача — mnemerch</title>
+<title>Вариант главной — стиль Comerch — mnemerch</title>
 <meta content="Подберём корпоративный мерч, подарки и брендированную продукцию под бюджет, сроки и задачу. Работаем с заказами от 50 000 ₽. Доставка по России." name="description"/>
 <meta content="корпоративный мерч, мерч с логотипом, сувенирная продукция, брендирование, Красноярск, мерч оптом" name="keywords"/>
 <meta content="Корпоративный мерч с логотипом на заказ — mnemerch" property="og:title"/>
@@ -454,67 +454,259 @@ body.home-alt-comerch .methods-tab.active { background: #ef2b2d; color: #fff; }
 body.home-alt-comerch .section-alt { background: #efefe6; }
 body.home-alt-comerch .footer { background: #121212; }
 </style>
+
+<style>
+/* Comerch-inspired demo: same content, different editorial wrapper */
+body.home-alt-comerch {
+  --accent: #ef2b2d;
+  --accent-hover: #d71920;
+  --accent-light: rgba(239,43,45,.10);
+  --dark: #121212;
+  --light: #f7f4eb;
+  --light-alt: #ece7da;
+  --border: #121212;
+  --text: #121212;
+  --text-muted: #4b4b44;
+  background: var(--light);
+  color: var(--text);
+}
+body.home-alt-comerch .header {
+  background: rgba(247,244,235,.94);
+  border-bottom: 2px solid #121212;
+}
+body.home-alt-comerch h1,
+body.home-alt-comerch h2,
+body.home-alt-comerch .section-title {
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+body.home-alt-comerch .section { padding-top: 76px; padding-bottom: 76px; }
+body.home-alt-comerch .section-alt { background: var(--light-alt); }
+body.home-alt-comerch .section-tag { color: var(--accent); letter-spacing: .16em; text-transform: uppercase; }
+body.home-alt-comerch .btn,
+body.home-alt-comerch .nav .nav-cta { border-radius: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .02em; }
+body.home-alt-comerch .btn-outline { border: 2px solid #121212; color: #121212; background: transparent; }
+body.home-alt-comerch .btn-outline:hover { background: #121212; color: #fff; }
+body.home-alt-comerch .comerch-hero {
+  padding: calc(var(--header-h) + 54px) 20px 44px;
+  background:
+    radial-gradient(circle at 78% 14%, rgba(239,43,45,.16), transparent 32%),
+    linear-gradient(180deg, #fbf8ef 0%, #f3eee3 100%);
+  border-bottom: 2px solid #121212;
+  overflow: hidden;
+}
+body.home-alt-comerch .comerch-hero-inner {
+  max-width: var(--max-w);
+  margin: 0 auto 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 330px);
+  gap: 18px;
+  align-items: stretch;
+}
+body.home-alt-comerch .comerch-hero-main {
+  min-height: 520px;
+  padding: clamp(28px, 5vw, 58px);
+  border: 2px solid #121212;
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(18,18,18,.72), rgba(18,18,18,.18)),
+    url('img/slide1.jpg') center/cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+body.home-alt-comerch .comerch-kicker,
+body.home-alt-comerch .comerch-card-label,
+body.home-alt-comerch .comerch-strip-title {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+body.home-alt-comerch .comerch-kicker { color: #fff; margin-bottom: 18px; }
+body.home-alt-comerch .comerch-hero h1 {
+  margin: 0;
+  max-width: 920px;
+  color: #fff;
+  font-size: clamp(52px, 9vw, 128px);
+  line-height: .82;
+}
+body.home-alt-comerch .comerch-lead {
+  max-width: 690px;
+  margin: 24px 0 0;
+  color: rgba(255,255,255,.88);
+  font-size: clamp(17px, 1.55vw, 22px);
+  line-height: 1.55;
+}
+body.home-alt-comerch .comerch-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+body.home-alt-comerch .comerch-actions .btn-outline { color: #fff; border-color: #fff; background: rgba(255,255,255,.06); }
+body.home-alt-comerch .comerch-actions .btn-outline:hover { color: #121212; background: #fff; }
+body.home-alt-comerch .comerch-hero-card {
+  padding: 26px;
+  border: 2px solid #121212;
+  border-radius: 30px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body.home-alt-comerch .comerch-hero-card--accent { background: var(--accent); color: #fff; }
+body.home-alt-comerch .comerch-card-value {
+  margin: 18px 0 18px;
+  font-size: clamp(34px, 4vw, 56px);
+  line-height: .9;
+  font-weight: 900;
+  letter-spacing: -.05em;
+  text-transform: uppercase;
+}
+body.home-alt-comerch .comerch-hero-card p { margin: 0; line-height: 1.55; }
+body.home-alt-comerch .comerch-checks { list-style: none; display: grid; gap: 12px; margin: 18px 0 0; padding: 0; }
+body.home-alt-comerch .comerch-checks li { display: flex; gap: 10px; font-weight: 800; text-transform: uppercase; }
+body.home-alt-comerch .comerch-checks li::before { content: '→'; color: var(--accent); }
+body.home-alt-comerch .comerch-offers,
+body.home-alt-comerch .comerch-catalog-strip {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+body.home-alt-comerch .comerch-offers { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-bottom: 16px; }
+body.home-alt-comerch .comerch-offer {
+  min-height: 178px;
+  padding: 20px;
+  border: 2px solid #121212;
+  border-radius: 26px;
+  background: #fff;
+  color: #121212;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+body.home-alt-comerch .comerch-offer:hover { transform: translateY(-5px); box-shadow: 8px 8px 0 #121212; background: #fff8df; }
+body.home-alt-comerch .comerch-offer span { color: var(--accent); font-weight: 900; margin-bottom: auto; }
+body.home-alt-comerch .comerch-offer strong { margin-top: 38px; font-size: 22px; line-height: 1.05; text-transform: uppercase; letter-spacing: -.04em; }
+body.home-alt-comerch .comerch-offer em { margin-top: 8px; color: #555; font-style: normal; line-height: 1.35; }
+body.home-alt-comerch .comerch-catalog-strip {
+  grid-template-columns: 1.1fr repeat(6, minmax(0, 1fr));
+  align-items: stretch;
+  padding: 14px;
+  border: 2px solid #121212;
+  border-radius: 26px;
+  background: #121212;
+}
+body.home-alt-comerch .comerch-strip-title { color: #fff; display: flex; align-items: center; padding: 0 12px; }
+body.home-alt-comerch .comerch-catalog-strip a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: #f7f4eb;
+  color: #121212;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+body.home-alt-comerch .comerch-catalog-strip a:hover { background: var(--accent); color: #fff; }
+body.home-alt-comerch .cat-card,
+body.home-alt-comerch .product-card,
+body.home-alt-comerch .case-card,
+body.home-alt-comerch .branding-methods,
+body.home-alt-comerch .quiz-card,
+body.home-alt-comerch .contact-card {
+  border: 2px solid #121212;
+  border-radius: 24px;
+  box-shadow: none;
+}
+body.home-alt-comerch .cat-card:hover,
+body.home-alt-comerch .product-card:hover,
+body.home-alt-comerch .case-card:hover { box-shadow: 8px 8px 0 #121212; transform: translateY(-4px); }
+body.home-alt-comerch .branding-method-tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+body.home-alt-comerch .client-logo-card { background: transparent; border: 0; box-shadow: none; }
+body.home-alt-comerch .footer { background: #121212; }
+@media (max-width: 1100px) {
+  body.home-alt-comerch .comerch-hero-inner { grid-template-columns: 1fr; }
+  body.home-alt-comerch .comerch-hero-card { min-height: auto; }
+  body.home-alt-comerch .comerch-offers { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  body.home-alt-comerch .comerch-catalog-strip { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  body.home-alt-comerch .comerch-strip-title { grid-column: 1 / -1; min-height: 44px; }
+}
+@media (max-width: 640px) {
+  body.home-alt-comerch .comerch-hero { padding: calc(var(--header-h) + 28px) 14px 28px; }
+  body.home-alt-comerch .comerch-hero-main { min-height: 470px; border-radius: 24px; padding: 24px; }
+  body.home-alt-comerch .comerch-hero h1 { font-size: clamp(44px, 15vw, 72px); }
+  body.home-alt-comerch .comerch-offers { grid-template-columns: 1fr; }
+  body.home-alt-comerch .comerch-catalog-strip { grid-template-columns: 1fr; }
+  body.home-alt-comerch .comerch-catalog-strip a { justify-content: flex-start; }
+}
+</style>
 </head>
 <body class="home-alt home-alt-comerch">
 <!-- Header -->
 <div id="header-placeholder"></div>
-<section aria-label="Ключевые направления mnemerch" class="hero-slider" id="heroSlider">
-<div class="hero-slide active" style="background-image: url('img/slide1.jpg'); background-image: image-set(url('img/slide1.webp') type('image/webp'), url('img/slide1.jpg') type('image/jpeg'))">
-<div class="hero-slide-inner">
-<div class="hero-copy">
-<div class="hero-eyebrow">Минимальная сумма заказа: <strong>от 50 000 ₽</strong></div>
-<h1>Корпоративный мерч с вашим лого</h1>
-<p>Подберём товары, нанесение и упаковку под задачу, бюджет и сроки. Подготовим коммерческое предложение с мокапами.</p>
-<div class="hero-slider-actions"><a class="btn btn-primary" href="#quiz">Получить расчёт</a><a class="btn btn-outline" href="catalog.html">Каталог товаров</a></div>
-<div class="hero-quick-links"><a href="portfolio.html">Портфолио</a><a href="methods.html">Методы печати</a><a href="about.html">О компании</a></div>
+<section class="comerch-hero" id="top">
+<div class="comerch-hero-inner">
+<div class="comerch-hero-main">
+<div class="comerch-kicker">/ корпоративный мерч под ключ</div>
+<h1>Мерч, который работает на бренд</h1>
+<p class="comerch-lead">Подберём товары, нанесение и упаковку под задачу, бюджет и сроки. Сделаем мокапы, согласуем детали, проконтролируем производство и доставку.</p>
+<div class="comerch-actions">
+<a class="btn btn-primary" href="#quiz">Рассчитать проект</a>
+<a class="btn btn-outline" href="catalog.html">Смотреть ассортимент</a>
 </div>
-<aside aria-label="Как мы работаем" class="hero-side-panel">
-<div class="panel-label">🔍 Как мы работаем</div>
-<ul>
-<li><span><b>Оставляете заявку</b> — рассказываете, что нужно: товар, бюджет и сроки.</span></li>
-<li><span><b>Согласовываете макет</b> — готовим мокапы с логотипом и утверждаем детали.</span></li>
-<li><span><b>Получаете заказ</b> — производим, проверяем качество и доставляем готовый мерч.</span></li>
+</div>
+<div class="comerch-hero-card comerch-hero-card--accent">
+<div class="comerch-card-label">минимальная сумма заказа</div>
+<div class="comerch-card-value">от 50 000 ₽</div>
+<p>Подходит для корпоративных подарков, welcome-паков, промо-наборов и мерча для мероприятий.</p>
+</div>
+<div class="comerch-hero-card">
+<div class="comerch-card-label">как работаем</div>
+<ul class="comerch-checks">
+<li>заявка и задача</li>
+<li>подбор товаров и нанесения</li>
+<li>мокапы и согласование</li>
+<li>производство, контроль, доставка</li>
 </ul>
-</aside>
 </div>
 </div>
-<div class="hero-slide" style="background-image: url('img/slide2.jpg'); background-image: image-set(url('img/slide2.webp') type('image/webp'), url('img/slide2.jpg') type('image/jpeg'))">
-<div class="hero-slide-inner">
-<div class="hero-copy">
-<div class="hero-eyebrow">Минимальная сумма заказа: <strong>от 50 000 ₽</strong></div>
-<div aria-level="2" class="hero-slide-title" role="heading">Замерчим что угодно на чём угодно</div>
-<p>Подберём товар и способ нанесения под вашу идею: от классической сувенирки до нестандартных промо-решений.</p>
-<div class="hero-slider-actions"><a class="btn btn-primary" href="#quiz">Получить расчёт</a><a class="btn btn-outline" href="portfolio.html">Смотреть портфолио</a></div>
+<div class="comerch-offers" aria-label="Ключевые направления">
+<a class="comerch-offer" href="#categories">
+<span>01</span>
+<strong>Корпоративный мерч с логотипом</strong>
+<em>для команды, клиентов и партнёров</em>
+</a>
+<a class="comerch-offer" href="#methods">
+<span>02</span>
+<strong>Замерчим что угодно</strong>
+<em>подберём способ нанесения под материал</em>
+</a>
+<a class="comerch-offer" href="contact.html">
+<span>03</span>
+<strong>Поставки из Китая</strong>
+<em>найдём позиции, проверим качество, организуем доставку</em>
+</a>
+<a class="comerch-offer" href="contact.html">
+<span>04</span>
+<strong>Подарки из Сибири</strong>
+<em>съедобные наборы и брендированная упаковка</em>
+</a>
 </div>
-</div>
-</div>
-<div class="hero-slide" style="background-image: url('img/slide3.jpg'); background-image: image-set(url('img/slide3.webp') type('image/webp'), url('img/slide3.jpg') type('image/jpeg'))">
-<div class="hero-slide-inner">
-<div class="hero-copy">
-<div class="hero-eyebrow">Минимальная сумма заказа: <strong>от 50 000 ₽</strong></div>
-<div aria-level="2" class="hero-slide-title" role="heading">Привезём сувенирную продукцию из Китая</div>
-<p>Найдём нужные позиции, проверим качество и поможем с доставкой до вашего склада или офиса.</p>
-<div class="hero-slider-actions"><a class="btn btn-primary" href="#quiz">Получить расчёт</a><a class="btn btn-outline" href="contact.html">Связаться</a></div>
-</div>
-</div>
-</div>
-<div class="hero-slide" style="background-image: url('img/slide4.jpg'); background-image: image-set(url('img/slide4.webp') type('image/webp'), url('img/slide4.jpg') type('image/jpeg'))">
-<div class="hero-slide-inner">
-<div class="hero-copy">
-<div class="hero-eyebrow">Минимальная сумма заказа: <strong>от 50 000 ₽</strong></div>
-<div aria-level="2" class="hero-slide-title" role="heading">Вкусные подарки из Сибири, собранные с душой</div>
-<p>Подберём съедобные наборы под ваш запрос и бюджет: для команды, партнёров, клиентов и праздничных кампаний.</p>
-<div class="hero-slider-actions"><a class="btn btn-primary" href="#quiz">Получить расчёт</a><a class="btn btn-outline" href="contact.html">Обсудить набор</a></div>
-</div>
-</div>
-</div>
-<button aria-label="Предыдущий слайд" class="hero-arrow hero-arrow-prev" type="button">‹</button>
-<button aria-label="Следующий слайд" class="hero-arrow hero-arrow-next" type="button">›</button>
-<div aria-label="Переключение слайдов" class="hero-dots">
-<button aria-label="Слайд 1" class="dot active" data-slide="0" type="button"></button>
-<button aria-label="Слайд 2" class="dot" data-slide="1" type="button"></button>
-<button aria-label="Слайд 3" class="dot" data-slide="2" type="button"></button>
-<button aria-label="Слайд 4" class="dot" data-slide="3" type="button"></button>
+<div class="comerch-catalog-strip" aria-label="Быстрый переход по разделам">
+<div class="comerch-strip-title">/ ассортимент</div>
+<a href="catalog.html?category=odezhda">Одежда</a>
+<a href="catalog.html?category=podarki">Подарочные наборы</a>
+<a href="catalog.html?category=promo">Промо-продукция</a>
+<a href="catalog.html?category=posuda">Посуда</a>
+<a href="catalog.html?category=upakovka">Упаковка</a>
+<a href="catalog.html?category=gadzhety">Гаджеты</a>
 </div>
 </section>
 <!-- Products -->
@@ -629,7 +821,7 @@ body.home-alt-comerch .footer { background: #121212; }
 <div class="section-tag anim"><span></span>Наши клиенты</div>
 <h2 class="section-title anim d1">Нам доверяют <em>компании из разных отраслей</em></h2>
 <p class="section-sub anim d2">Работаем с промышленными, энергетическими, транспортными, IT- и розничными компаниями. Ниже — часть клиентов, для которых команда выполняла проекты.</p>
-<div aria-label="Логотипы клиентов" class="client-logo-marquee client-logo-marquee--two-rows"><div class="client-logo-row client-logo-row--top"><div class="client-logo-track"><div class="client-logo-set"><div class="client-logo-card"><img alt="KAM art" decoding="async" loading="lazy" src="assets/clients/kam-art.png"/></div><div class="client-logo-card"><img alt="EnerGo engineering" decoding="async" loading="lazy" src="assets/clients/energo-engineering.png"/></div><div class="client-logo-card"><img alt="G-Energy" decoding="async" loading="lazy" src="assets/clients/g-energy.png"/></div><div class="client-logo-card"><img alt="Ростелеком" decoding="async" loading="lazy" src="assets/clients/rostelecom.png"/></div><div class="client-logo-card"><img alt="Miele" decoding="async" loading="lazy" src="assets/clients/miele.png"/></div><div class="client-logo-card"><img alt="Бирюса" decoding="async" loading="lazy" src="assets/clients/biryusa.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/kam-art.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/energo-engineering.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/g-energy.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rostelecom.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/miele.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/biryusa.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/kam-art.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/energo-engineering.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/g-energy.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rostelecom.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/miele.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/biryusa.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/kam-art.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/energo-engineering.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/g-energy.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rostelecom.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/miele.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/biryusa.png"/></div></div></div></div><div class="client-logo-row client-logo-row--bottom client-logo-row--reverse"><div class="client-logo-track"><div class="client-logo-set"><div class="client-logo-card"><img alt="Toshiba" decoding="async" loading="lazy" src="assets/clients/toshiba.png"/></div><div class="client-logo-card"><img alt="Красмаш" decoding="async" loading="lazy" src="assets/clients/krasmash.png"/></div><div class="client-logo-card"><img alt="Лукойл" decoding="async" loading="lazy" src="assets/clients/lukoil.png"/></div><div class="client-logo-card"><img alt="РЖД" decoding="async" loading="lazy" src="assets/clients/rzd.png"/></div><div class="client-logo-card"><img alt="Газпром нефть" decoding="async" loading="lazy" src="assets/clients/gazprom-neft.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/toshiba.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/krasmash.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/lukoil.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rzd.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/gazprom-neft.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/toshiba.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/krasmash.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/lukoil.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rzd.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/gazprom-neft.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/toshiba.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/krasmash.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/lukoil.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rzd.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/gazprom-neft.png"/></div></div></div></div></div>
+<div aria-label="Логотипы клиентов" class="client-logo-marquee client-logo-marquee--two-rows"><div class="client-logo-row client-logo-row--top"><div class="client-logo-track"><div class="client-logo-set"><div class="client-logo-card"><img alt="KAM art" decoding="async" loading="lazy" src="assets/clients/kam-art.png"/></div><div class="client-logo-card"><img alt="EnerGo engineering" decoding="async" loading="lazy" src="assets/clients/energo-engineering.png"/></div><div class="client-logo-card"><img alt="G-Energy" decoding="async" loading="lazy" src="assets/clients/g-energy.png"/></div><div class="client-logo-card"><img alt="Ростелеком" decoding="async" loading="lazy" src="assets/clients/rostelecom.png"/></div><div class="client-logo-card"><img alt="Miele" decoding="async" loading="lazy" src="assets/clients/miele.png"/></div><div class="client-logo-card"><img alt="Бирюса" decoding="async" loading="lazy" src="assets/clients/biryusa.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/kam-art.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/energo-engineering.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/g-energy.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rostelecom.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/miele.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/biryusa.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/kam-art.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/energo-engineering.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/g-energy.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rostelecom.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/miele.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/biryusa.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/kam-art.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/energo-engineering.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/g-energy.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rostelecom.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/miele.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/biryusa.png"/></div></div></div></div><div class="client-logo-row client-logo-row--bottom"><div class="client-logo-track"><div class="client-logo-set"><div class="client-logo-card"><img alt="Toshiba" decoding="async" loading="lazy" src="assets/clients/toshiba.png"/></div><div class="client-logo-card"><img alt="Красмаш" decoding="async" loading="lazy" src="assets/clients/krasmash.png"/></div><div class="client-logo-card"><img alt="Лукойл" decoding="async" loading="lazy" src="assets/clients/lukoil.png"/></div><div class="client-logo-card"><img alt="РЖД" decoding="async" loading="lazy" src="assets/clients/rzd.png"/></div><div class="client-logo-card"><img alt="Газпром нефть" decoding="async" loading="lazy" src="assets/clients/gazprom-neft.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/toshiba.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/krasmash.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/lukoil.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rzd.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/gazprom-neft.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/toshiba.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/krasmash.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/lukoil.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rzd.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/gazprom-neft.png"/></div></div><div aria-hidden="true" class="client-logo-set"><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/toshiba.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/krasmash.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/lukoil.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/rzd.png"/></div><div class="client-logo-card"><img alt="" decoding="async" loading="lazy" src="assets/clients/gazprom-neft.png"/></div></div></div></div></div>
 <div class="text-center mt-6 anim d5">
 <a class="btn btn-outline" href="portfolio.html">Смотреть портфолио →</a>
 </div>
