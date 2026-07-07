@@ -1739,3 +1739,15 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
     min-height: 420px;
   }
 }
+
+/* --- Methods images from old site: keep full artwork visible --- */
+.branding-method-photos img {
+  object-fit: contain;
+  padding: 10px;
+  background: #fffaf4;
+}
+@media (min-width: 1025px) {
+  .branding-method-panel {
+    min-height: 0;
+  }
+}
