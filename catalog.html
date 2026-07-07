@@ -257,7 +257,7 @@ function renderCatalog(list) {
     return '<div class="product-card anim' + (i ? ' d' + Math.min(i, 5) : '') + '" data-cat="' + esc(p.category) + '" data-price="' + (p.price || 0) + '">' +
       '<div class="product-img">' +
         '<div class="product-colors"><span style="background:#fff"></span></div>' +
-        '<img src="' + esc(img) + '" alt="' + esc(p.name) + '" loading="lazy" onerror="this.src=\'https://placehold.co/300x300/eee/999?text=No+Image\'">' +
+        '<img src="' + esc(img) + '" alt="' + esc(p.name) + '" loading="lazy" decoding="async" onerror="this.src=\'https://placehold.co/300x300/eee/999?text=No+Image\'">' +
       '</div>' +
       '<div class="product-body">' +
         '<div class="name">' + esc(p.name) + '</div>' +
@@ -294,7 +294,7 @@ function showQResult() {
     matched.forEach(function(p){
       var img=p.image_thumb||p.image_local||p.image_url||'';
       var d=document.createElement('div');d.className='rp-card';
-      d.innerHTML='<div class="rp-img"><img src="'+esc(img)+'" alt="'+esc(p.name)+'" loading="lazy"></div><div class="rp-body"><div class="rp-name">'+esc(p.name)+'</div><div class="rp-price">'+(p.price?p.price+' \u20BD':'\u041F\u043E \u0437\u0430\u043F\u0440\u043E\u0441\u0443')+'</div></div>';cont.appendChild(d);
+      d.innerHTML='<div class="rp-img"><img src="'+esc(img)+'" alt="'+esc(p.name)+'" loading="lazy" decoding="async"></div><div class="rp-body"><div class="rp-name">'+esc(p.name)+'</div><div class="rp-price">'+(p.price?p.price+' \u20BD':'\u041F\u043E \u0437\u0430\u043F\u0440\u043E\u0441\u0443')+'</div></div>';cont.appendChild(d);
     });
 }
 function finishQ() {

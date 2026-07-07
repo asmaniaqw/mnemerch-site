@@ -18,6 +18,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="css/style.css" rel="stylesheet"/>
+<link rel="preload" as="image" href="img/slide1.webp" type="image/webp"/>
 
 <style>
 /* Main page: hero-slider is intentionally kept because the client wants slides in the first screen. */
@@ -469,7 +470,7 @@
 <!-- Header -->
 <div id="header-placeholder"></div>
 <section aria-label="Ключевые направления mnemerch" class="hero-slider" id="heroSlider">
-<div class="hero-slide active" style="background-image: url('img/slide1.jpg')">
+<div class="hero-slide active" style="background-image: url('img/slide1.jpg'); background-image: image-set(url('img/slide1.webp') type('image/webp'), url('img/slide1.jpg') type('image/jpeg'))">
 <div class="hero-slide-inner">
 <div class="hero-copy">
 <div class="hero-eyebrow">Минимальная сумма заказа: <strong>от 50 000 ₽</strong></div>
@@ -489,7 +490,7 @@
 </aside>
 </div>
 </div>
-<div class="hero-slide" style="background-image: url('img/slide2.jpg')">
+<div class="hero-slide" style="background-image: url('img/slide2.jpg'); background-image: image-set(url('img/slide2.webp') type('image/webp'), url('img/slide2.jpg') type('image/jpeg'))">
 <div class="hero-slide-inner">
 <div class="hero-copy">
 <div class="hero-eyebrow">Минимальная сумма заказа: <strong>от 50 000 ₽</strong></div>
@@ -500,7 +501,7 @@
 </div>
 </div>
 </div>
-<div class="hero-slide" style="background-image: url('img/slide3.jpg')">
+<div class="hero-slide" style="background-image: url('img/slide3.jpg'); background-image: image-set(url('img/slide3.webp') type('image/webp'), url('img/slide3.jpg') type('image/jpeg'))">
 <div class="hero-slide-inner">
 <div class="hero-copy">
 <div class="hero-eyebrow">Минимальная сумма заказа: <strong>от 50 000 ₽</strong></div>
@@ -511,7 +512,7 @@
 </div>
 </div>
 </div>
-<div class="hero-slide" style="background-image: url('img/slide4.jpg')">
+<div class="hero-slide" style="background-image: url('img/slide4.jpg'); background-image: image-set(url('img/slide4.webp') type('image/webp'), url('img/slide4.jpg') type('image/jpeg'))">
 <div class="hero-slide-inner">
 <div class="hero-copy">
 <div class="hero-eyebrow">Минимальная сумма заказа: <strong>от 50 000 ₽</strong></div>
@@ -595,17 +596,17 @@
 <h2 class="section-title anim d1">Нам доверяют <em>компании из разных отраслей</em></h2>
 <p class="section-sub anim d2">Работаем с промышленными, энергетическими, транспортными, IT- и розничными компаниями. Ниже — часть клиентов, для которых команда выполняла проекты.</p>
 <div class="client-logo-grid anim d3">
-<div class="client-logo-card anim d0"><img alt="KAM art" loading="lazy" src="assets/clients/kam-art.png"/></div>
-<div class="client-logo-card anim d0"><img alt="Toshiba" loading="lazy" src="assets/clients/toshiba.png"/></div>
-<div class="client-logo-card anim d0"><img alt="EnerGo engineering" loading="lazy" src="assets/clients/energo-engineering.png"/></div>
-<div class="client-logo-card anim d1"><img alt="Красмаш" loading="lazy" src="assets/clients/krasmash.png"/></div>
-<div class="client-logo-card anim d1"><img alt="G-Energy" loading="lazy" src="assets/clients/g-energy.png"/></div>
-<div class="client-logo-card anim d1"><img alt="Лукойл" loading="lazy" src="assets/clients/lukoil.png"/></div>
-<div class="client-logo-card anim d2"><img alt="Ростелеком" loading="lazy" src="assets/clients/rostelecom.png"/></div>
-<div class="client-logo-card anim d2"><img alt="РЖД" loading="lazy" src="assets/clients/rzd.png"/></div>
-<div class="client-logo-card anim d2"><img alt="Miele" loading="lazy" src="assets/clients/miele.png"/></div>
-<div class="client-logo-card anim d3"><img alt="Газпром нефть" loading="lazy" src="assets/clients/gazprom-neft.png"/></div>
-<div class="client-logo-card anim d3"><img alt="Бирюса" loading="lazy" src="assets/clients/biryusa.png"/></div>
+<div class="client-logo-card anim d0"><img alt="KAM art" loading="lazy" decoding="async" src="assets/clients/kam-art.png"/></div>
+<div class="client-logo-card anim d0"><img alt="Toshiba" loading="lazy" decoding="async" src="assets/clients/toshiba.png"/></div>
+<div class="client-logo-card anim d0"><img alt="EnerGo engineering" loading="lazy" decoding="async" src="assets/clients/energo-engineering.png"/></div>
+<div class="client-logo-card anim d1"><img alt="Красмаш" loading="lazy" decoding="async" src="assets/clients/krasmash.png"/></div>
+<div class="client-logo-card anim d1"><img alt="G-Energy" loading="lazy" decoding="async" src="assets/clients/g-energy.png"/></div>
+<div class="client-logo-card anim d1"><img alt="Лукойл" loading="lazy" decoding="async" src="assets/clients/lukoil.png"/></div>
+<div class="client-logo-card anim d2"><img alt="Ростелеком" loading="lazy" decoding="async" src="assets/clients/rostelecom.png"/></div>
+<div class="client-logo-card anim d2"><img alt="РЖД" loading="lazy" decoding="async" src="assets/clients/rzd.png"/></div>
+<div class="client-logo-card anim d2"><img alt="Miele" loading="lazy" decoding="async" src="assets/clients/miele.png"/></div>
+<div class="client-logo-card anim d3"><img alt="Газпром нефть" loading="lazy" decoding="async" src="assets/clients/gazprom-neft.png"/></div>
+<div class="client-logo-card anim d3"><img alt="Бирюса" loading="lazy" decoding="async" src="assets/clients/biryusa.png"/></div>
 </div>
 <div class="text-center mt-6 anim d5">
 <a class="btn btn-outline" href="portfolio.html">Смотреть портфолио →</a>
@@ -764,7 +765,7 @@ function renderAllProducts(list) {
     return '<div class="product-card anim' + (i ? ' d' + Math.min(i, 5) : '') + '" data-cat="' + esc(p.category) + '" data-price="' + (p.price || 0) + '">' +
       '<div class="product-img">' +
         '<div class="product-colors"><span style="background:#fff"></span></div>' +
-        '<img src="' + esc(img) + '" alt="' + esc(p.name) + '" loading="lazy" onerror="this.src=\'https://placehold.co/300x300/eee/999?text=No+Image\'">' +
+        '<img src="' + esc(img) + '" alt="' + esc(p.name) + '" loading="lazy" decoding="async" onerror="this.src=\'https://placehold.co/300x300/eee/999?text=No+Image\'">' +
       '</div>' +
       '<div class="product-body">' +
         '<div class="name">' + esc(p.name) + '</div>' +
@@ -824,7 +825,7 @@ function showQuizResult() {
     var img = p.image_thumb || p.image_local || p.image_url || '';
     var d = document.createElement('div');
     d.className = 'rp-card';
-    d.innerHTML = '<a href="p/' + p.id + '.html" class="rp-link" style="text-decoration:none;color:inherit;display:block;"><div class="rp-img"><img src="' + esc(img) + '" alt="' + esc(p.name) + '" loading="lazy"></div><div class="rp-body"><div class="rp-name">' + esc(p.name) + '</div><div class="rp-price">' + (p.price ? p.price + ' \u20BD' : '\u041F\u043E \u0437\u0430\u043F\u0440\u043E\u0441\u0443') + '</div><div style="margin-top:8px;font-size:12px;color:var(--accent);font-weight:600;">\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435 \u2192</div></div></a>';
+    d.innerHTML = '<a href="p/' + p.id + '.html" class="rp-link" style="text-decoration:none;color:inherit;display:block;"><div class="rp-img"><img src="' + esc(img) + '" alt="' + esc(p.name) + '" loading="lazy" decoding="async"></div><div class="rp-body"><div class="rp-name">' + esc(p.name) + '</div><div class="rp-price">' + (p.price ? p.price + ' \u20BD' : '\u041F\u043E \u0437\u0430\u043F\u0440\u043E\u0441\u0443') + '</div><div style="margin-top:8px;font-size:12px;color:var(--accent);font-weight:600;">\u041F\u043E\u0434\u0440\u043E\u0431\u043D\u0435\u0435 \u2192</div></div></a>';
     cont.appendChild(d);
   });
 }

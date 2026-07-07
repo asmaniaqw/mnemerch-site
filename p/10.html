@@ -27,7 +27,7 @@
 <div class="product-detail">
 <div class="product-gallery anim">
 <div class="main-image" style="border-radius:20px;overflow:hidden;background:var(--light-alt);">
-<img alt="Футболка мужская Mick Deluxe/men, цвет красный делюкс для брендирования" id="pMainImage" src="data/products/10/main.jpg" style="width:100%;height:auto;display:block;"/>
+<img alt="Футболка мужская Mick Deluxe/men, цвет красный делюкс для брендирования" id="pMainImage" decoding="async" fetchpriority="high" src="data/products/10/main.jpg" style="width:100%;height:auto;display:block;"/>
 </div>
 <div class="thumbs" id="pThumbs"></div>
 </div>
@@ -151,10 +151,10 @@ function renderProduct(p) {
   var gallery = p.gallery || [];
   if (gallery.length > 0) {
     thumbsEl.innerHTML = gallery.map(function(url, i) {
-      return '<div class="thumb' + (i === 0 ? ' active' : '') + '" onclick="changeMainImage(this,\'' + esc(url) + '\')"><img src="' + esc(url) + '" alt="' + esc(p.name) + '"></div>';
+      return '<div class="thumb' + (i === 0 ? ' active' : '') + '" onclick="changeMainImage(this,\'' + esc(url) + '\')"><img src="' + esc(url) + '" alt="' + esc(p.name) + '" decoding="async"></div>';
     }).join('');
   } else {
-    thumbsEl.innerHTML = '<div class="thumb active"><img src="' + esc(img) + '" alt="' + esc(p.name) + '"></div>';
+    thumbsEl.innerHTML = '<div class="thumb active"><img src="' + esc(img) + '" alt="' + esc(p.name) + '" decoding="async"></div>';
   }
 
   var specs = [
@@ -207,7 +207,7 @@ function renderRelated(p) {
     var img = x.image_thumb || x.image_local || x.image_url || '';
     return '<div class="product-card anim' + (i ? ' d' + (i + 1) : '') + '">' +
       '<div class="product-img"><div class="product-colors"><span style="background:#fff"></span></div>' +
-      '<img src="' + esc(img) + '" alt="' + esc(x.name) + '" loading="lazy" onerror="this.src=\'https://placehold.co/300x300/eee/999?text=No+Image\'">' +
+      '<img src="' + esc(img) + '" alt="' + esc(x.name) + '" loading="lazy" decoding="async" onerror="this.src=\'https://placehold.co/300x300/eee/999?text=No+Image\'">' +
       '</div><div class="product-body"><div class="name">' + esc(x.name) + '</div>' +
       '<div class="price">' + (x.price ? 'от ' + x.price + ' ₽ <small>/ шт. без нанесения</small>' : 'Цена по запросу') + '</div>' +
       '<div class="art">Под нанесение логотипа · заказ от 50 000 ₽</div>' +

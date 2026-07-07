@@ -31,17 +31,17 @@
 <h2 class="section-title anim d1" style="text-align:center;">Компании, которые <em>выбирают нас</em></h2>
 <p class="section-sub anim d2" style="text-align:center;margin-left:auto;margin-right:auto;">Среди наших клиентов — производственные, энергетические, транспортные и технологические компании.</p>
 <div class="client-logo-grid anim d3">
-<div class="client-logo-card anim d0"><img alt="KAM art" loading="lazy" src="assets/clients/kam-art.png"/></div>
-<div class="client-logo-card anim d0"><img alt="Toshiba" loading="lazy" src="assets/clients/toshiba.png"/></div>
-<div class="client-logo-card anim d0"><img alt="EnerGo engineering" loading="lazy" src="assets/clients/energo-engineering.png"/></div>
-<div class="client-logo-card anim d1"><img alt="Красмаш" loading="lazy" src="assets/clients/krasmash.png"/></div>
-<div class="client-logo-card anim d1"><img alt="G-Energy" loading="lazy" src="assets/clients/g-energy.png"/></div>
-<div class="client-logo-card anim d1"><img alt="Лукойл" loading="lazy" src="assets/clients/lukoil.png"/></div>
-<div class="client-logo-card anim d2"><img alt="Ростелеком" loading="lazy" src="assets/clients/rostelecom.png"/></div>
-<div class="client-logo-card anim d2"><img alt="РЖД" loading="lazy" src="assets/clients/rzd.png"/></div>
-<div class="client-logo-card anim d2"><img alt="Miele" loading="lazy" src="assets/clients/miele.png"/></div>
-<div class="client-logo-card anim d3"><img alt="Газпром нефть" loading="lazy" src="assets/clients/gazprom-neft.png"/></div>
-<div class="client-logo-card anim d3"><img alt="Бирюса" loading="lazy" src="assets/clients/biryusa.png"/></div>
+<div class="client-logo-card anim d0"><img alt="KAM art" loading="lazy" decoding="async" src="assets/clients/kam-art.png"/></div>
+<div class="client-logo-card anim d0"><img alt="Toshiba" loading="lazy" decoding="async" src="assets/clients/toshiba.png"/></div>
+<div class="client-logo-card anim d0"><img alt="EnerGo engineering" loading="lazy" decoding="async" src="assets/clients/energo-engineering.png"/></div>
+<div class="client-logo-card anim d1"><img alt="Красмаш" loading="lazy" decoding="async" src="assets/clients/krasmash.png"/></div>
+<div class="client-logo-card anim d1"><img alt="G-Energy" loading="lazy" decoding="async" src="assets/clients/g-energy.png"/></div>
+<div class="client-logo-card anim d1"><img alt="Лукойл" loading="lazy" decoding="async" src="assets/clients/lukoil.png"/></div>
+<div class="client-logo-card anim d2"><img alt="Ростелеком" loading="lazy" decoding="async" src="assets/clients/rostelecom.png"/></div>
+<div class="client-logo-card anim d2"><img alt="РЖД" loading="lazy" decoding="async" src="assets/clients/rzd.png"/></div>
+<div class="client-logo-card anim d2"><img alt="Miele" loading="lazy" decoding="async" src="assets/clients/miele.png"/></div>
+<div class="client-logo-card anim d3"><img alt="Газпром нефть" loading="lazy" decoding="async" src="assets/clients/gazprom-neft.png"/></div>
+<div class="client-logo-card anim d3"><img alt="Бирюса" loading="lazy" decoding="async" src="assets/clients/biryusa.png"/></div>
 </div>
 </div>
 </section>
@@ -66,7 +66,7 @@
 <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">‹</button>
 <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">›</button>
 <div class="lightbox-img-wrap">
-<img alt="" id="lightboxImg" src=""/>
+<img alt="" id="lightboxImg" decoding="async" src=""/>
 </div>
 <div class="lightbox-thumbs" id="lightboxThumbs"></div>
 <div class="lightbox-case-info" id="lightboxCaseInfo"></div>
@@ -98,7 +98,8 @@ async function loadPortfolio() {
     filteredCases = cases.slice();
     renderCarousel();
   } catch(e) {
-    document.getElementById("caseGrid").innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted);">\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e</div>';
+    var errorTarget = document.getElementById("carouselTrack");
+    if (errorTarget) errorTarget.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-muted);">Не удалось загрузить портфолио</div>';
     console.error(e);
   }
 }
@@ -109,7 +110,7 @@ function renderCarousel() {
   track.innerHTML = filteredCases.map(function(c, i) {
     var imgPath = "img/portfolio/thumbs/" + c.thumb;
     return '<div class="carousel-slide' + (i === 0 ? " active" : "") + '" data-idx="' + i + '" onclick="openLightbox(' + i + ')">' +
-      '<div class="carousel-img"><img src="' + esc(imgPath) + '" alt="" loading="' + (i < 3 ? "eager" : "lazy") + '"></div>' +
+      '<div class="carousel-img"><img src="' + esc(imgPath) + '" alt="" loading="' + (i < 3 ? "eager" : "lazy") + '" decoding="async"></div>' +
       (c.client ? '<div class="carousel-label">' + esc(c.client) + (c.industry ? " \u00b7 " + esc(c.industry) : "") + '</div>' : "") +
     '</div>';
   }).join("");
@@ -214,7 +215,7 @@ function showLightboxImage() {
     imgs.forEach(function(name, i) {
       var t = document.createElement("div");
       t.className = "thumb" + (i === lightboxImgIdx ? " active" : "");
-      t.innerHTML = '<img src="img/portfolio/thumbs/' + name + '" alt="" loading="lazy">';
+      t.innerHTML = '<img src="img/portfolio/thumbs/' + name + '" alt="" loading="lazy" decoding="async">';
       t.onclick = function() { lightboxImgIdx = i; showLightboxImage(); };
       thumbsEl.appendChild(t);
     });
