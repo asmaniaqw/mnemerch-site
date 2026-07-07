@@ -492,7 +492,7 @@
         <h1>Корпоративный мерч с вашим лого</h1>
         <p>Подберём товары, нанесение и упаковку под задачу, бюджет и тираж. Подготовим коммерческое предложение с мокапами.</p>
         <div class="hero-min-card"><span>Минимальный тираж для заказа</span><strong>Одежда и текстиль — от 100 штук; офисная продукция — от 300 штук</strong></div>
-        <div class="hero-slider-actions"><a href="#quiz" class="btn btn-primary">Получить расчёт за 3 часа</a><a href="catalog.html" class="btn btn-outline">Каталог товаров</a></div>
+        <div class="hero-slider-actions"><a href="#quiz" class="btn btn-primary">Получить расчёт</a><a href="catalog.html" class="btn btn-outline">Каталог товаров</a></div>
         <div class="hero-quick-links"><a href="portfolio.html">Портфолио</a><a href="methods.html">Методы печати</a><a href="about.html">О компании</a></div>
       </div>
       <aside class="hero-side-panel" aria-label="Как мы работаем">
@@ -512,7 +512,7 @@
         <div class="hero-slide-title" role="heading" aria-level="2">Замерчим что угодно на чём угодно</div>
         <p>Подберём товар и способ нанесения под вашу идею: от классической сувенирки до нестандартных промо-решений.</p>
         <div class="hero-min-card"><span>Минимальный тираж для заказа</span><strong>Посуда, упаковка и полиграфия — от 100 штук; гаджеты и промо-продукция — от 30 штук</strong></div>
-        <div class="hero-slider-actions"><a href="#quiz" class="btn btn-primary">Получить расчёт за 3 часа</a><a href="portfolio.html" class="btn btn-outline">Смотреть портфолио</a></div>
+        <div class="hero-slider-actions"><a href="#quiz" class="btn btn-primary">Получить расчёт</a><a href="portfolio.html" class="btn btn-outline">Смотреть портфолио</a></div>
       </div>
     </div>
   </div>
@@ -523,7 +523,7 @@
         <div class="hero-slide-title" role="heading" aria-level="2">Привезём сувенирную продукцию из Китая</div>
         <p>Найдём нужные позиции, проверим качество и поможем с доставкой до вашего склада или офиса.</p>
         <div class="hero-min-card"><span>Минимальный тираж для заказа</span><strong>Сувенирная продукция — от 100 штук</strong></div>
-        <div class="hero-slider-actions"><a href="#quiz" class="btn btn-primary">Получить расчёт за 3 часа</a><a href="contact.html" class="btn btn-outline">Связаться</a></div>
+        <div class="hero-slider-actions"><a href="#quiz" class="btn btn-primary">Получить расчёт</a><a href="contact.html" class="btn btn-outline">Связаться</a></div>
       </div>
     </div>
   </div>
@@ -535,7 +535,7 @@
         <div class="hero-slide-title" role="heading" aria-level="2">Вкусные подарки из Сибири, собранные с душой</div>
         <p>Подберём съедобные наборы под ваш запрос и бюджет: для команды, партнёров, клиентов и праздничных кампаний.</p>
         <div class="hero-min-card"><span>Минимальный тираж для заказа</span><strong>Съедобная продукция — от 30 штук</strong></div>
-        <div class="hero-slider-actions"><a href="#quiz" class="btn btn-primary">Получить расчёт за 3 часа</a><a href="contact.html" class="btn btn-outline">Обсудить набор</a></div>
+        <div class="hero-slider-actions"><a href="#quiz" class="btn btn-primary">Получить расчёт</a><a href="contact.html" class="btn btn-outline">Обсудить набор</a></div>
       </div>
     </div>
   </div>
@@ -697,8 +697,10 @@
         <div class="quiz-q">Ваши контакты</div>
         <div class="quiz-options" style="gap:8px;">
           <input type="text" placeholder="Ваше имя" id="qName" style="padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-size:14px;outline:none;width:100%;font-family:inherit;background:rgba(255,255,255,0.03);color:#fff;">
-          <input type="tel" placeholder="Телефон" id="qPhone" style="padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-size:14px;outline:none;width:100%;font-family:inherit;background:rgba(255,255,255,0.03);color:#fff;">
-          <button onclick="finishQuiz()" style="padding:14px 32px;border-radius:50px;background:var(--accent);color:#fff;font-size:14px;font-weight:600;border:none;cursor:pointer;width:100%;font-family:inherit;">Получить расчёт за 2 часа →</button>
+          <input type="tel" placeholder="Телефон или Telegram" id="qPhone" style="padding:12px 16px;border:1px solid var(--border);border-radius:12px;font-size:14px;outline:none;width:100%;font-family:inherit;background:rgba(255,255,255,0.03);color:#fff;">
+          <label class="form-consent" style="color:rgba(255,255,255,0.65);margin:2px 0 4px;"><input type="checkbox" name="personalDataConsent" id="qConsent" required><span>Согласен на обработку персональных данных и принимаю <a href="privacy.html" style="color:#fff;">политику конфиденциальности</a>.</span></label>
+          <button onclick="finishQuiz()" style="padding:14px 32px;border-radius:50px;background:var(--accent);color:#fff;font-size:14px;font-weight:600;border:none;cursor:pointer;width:100%;font-family:inherit;">Получить расчёт →</button>
+          <div class="lead-status" id="qLeadStatus" aria-live="polite"></div>
         </div>
       </div>
 
@@ -708,6 +710,7 @@
           <div class="result-text" id="qResultText"></div>
           <div class="result-tags" id="qResultTags"></div>
           <div class="result-prods" id="qResultProds"></div>
+          <div class="lead-status" id="qResultLeadStatus" aria-live="polite"></div>
           <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px;">
             <a href="contact.html" class="btn btn-primary btn-sm">Заказать расчёт →</a>
             <a href="catalog.html" class="btn btn-outline btn-sm">Выбрать товары →</a>
@@ -725,11 +728,19 @@
     <h2 class="section-title anim d1">Обсудим <em>ваш проект</em></h2>
     <div class="contact-grid">
       <form class="anim d2" onsubmit="return submitContact(event)">
-        <div class="form-group"><input type="text" placeholder="Ваше имя" id="cName" required></div>
-        <div class="form-group"><input type="tel" placeholder="Телефон" id="cPhone" required></div>
+        <div class="form-row">
+          <div class="form-group"><input type="text" placeholder="Ваше имя" id="cName" required></div>
+          <div class="form-group"><input type="tel" placeholder="Телефон или Telegram" id="cPhone" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><input type="text" placeholder="Компания (необязательно)" id="cCompany"></div>
+          <div class="form-group"><input type="text" placeholder="Тираж, например 100 шт." id="cQty"></div>
+        </div>
         <div class="form-group"><input type="email" placeholder="Email (необязательно)" id="cEmail"></div>
-        <div class="form-group"><textarea placeholder="Опишите задачу: что нужно, тираж, бюджет, сроки" id="cMsg"></textarea></div>
+        <div class="form-group"><textarea placeholder="Что нужно рассчитать: товар, бюджет, сроки, нанесение" id="cMsg"></textarea></div>
+        <label class="form-consent"><input type="checkbox" name="personalDataConsent" required><span>Согласен на обработку персональных данных и принимаю <a href="privacy.html">политику конфиденциальности</a>.</span></label>
         <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Получить расчёт →</button>
+        <div class="lead-status" aria-live="polite"></div>
       </form>
       <div class="contact-info anim d3">
         <h3>Свяжитесь с нами</h3>
@@ -753,6 +764,7 @@
 <div id="footer-placeholder"></div>
 
 <script src="js/components.js"></script>
+<script src="js/leads.js"></script>
 <script src="js/quiz-selector.js"></script>
 <script>
 let productsData = [];
@@ -847,11 +859,17 @@ function showQuizResult() {
 function finishQuiz() {
   var nm = document.getElementById('qName').value.trim();
   var ph = document.getElementById('qPhone').value.trim();
-  if (!nm || !ph) { alert('\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0435 \u0438\u043C\u044F \u0438 \u0442\u0435\u043B\u0435\u0444\u043E\u043D'); return false; }
-  fetch('api/lead', {
-    method:'POST', headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({name:nm,phone:ph,source:'quiz',message:'\u0421\u0444\u0435\u0440\u0430:'+(qAnswers[0]||'?')+', \u0442\u043E\u0432\u0430\u0440:'+(qAnswers[1]||'?')+', \u0442\u0438\u0440\u0430\u0436:'+(qAnswers[2]||'?')+', \u0431\u044E\u0434\u0436\u0435\u0442:'+(qAnswers[3]||'?')})
-  }).then(function(r){if(!r.ok)console.error('Lead submit failed',r.status)}).catch(function(e){console.error(e)});
+  var quizScope = document.getElementById('qs4');
+  if (!nm || !ph) { MneLeads.showStatus('#qLeadStatus', 'Пожалуйста, заполните имя и телефон / Telegram.', 'error'); return false; }
+  if (!MneLeads.requireConsent(quizScope, '#qLeadStatus')) return false;
+
+  MneLeads.submitLead({
+    name: nm,
+    phone: ph,
+    source: 'quiz',
+    message: 'Сфера: ' + (qAnswers[0] || '?') + '; товар: ' + (qAnswers[1] || '?') + '; тираж: ' + (qAnswers[2] || '?') + '; бюджет: ' + (qAnswers[3] || '?')
+  }, { statusTarget: '#qResultLeadStatus' });
+
   document.querySelectorAll('.quiz-step').forEach(function(el) { el.classList.remove('active'); });
   document.getElementById('qs5').classList.add('active');
   document.getElementById('qProg').style.width = '100%';
@@ -861,15 +879,21 @@ function finishQuiz() {
 
 function submitContact(e) {
   e.preventDefault();
+  var form = e.target;
   var nm = document.getElementById('cName').value.trim();
   var ph = document.getElementById('cPhone').value.trim();
-  if (!nm || !ph) { alert('\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u0437\u0430\u043F\u043E\u043B\u043D\u0438\u0442\u0435 \u0438\u043C\u044F \u0438 \u0442\u0435\u043B\u0435\u0444\u043E\u043D'); return false; }
-  fetch('api/lead', {
-    method:'POST', headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({name:nm,phone:ph,email:document.getElementById('cEmail').value,message:document.getElementById('cMsg').value,source:'contact'})
-  }).then(function(r){if(!r.ok)console.error('Lead submit failed',r.status)}).catch(function(e){console.error(e)});
-  alert('\u0421\u043F\u0430\u0441\u0438\u0431\u043E, ' + nm + '! \u041C\u044B \u0441\u0432\u044F\u0436\u0435\u043C\u0441\u044F \u0441 \u0432\u0430\u043C\u0438 \u0432 \u0431\u043B\u0438\u0436\u0430\u0439\u0448\u0435\u0435 \u0432\u0440\u0435\u043C\u044F.');
-  e.target.reset();
+  if (!nm || !ph) { MneLeads.showStatus(form, 'Пожалуйста, заполните имя и телефон / Telegram.', 'error'); return false; }
+  if (!MneLeads.requireConsent(form)) return false;
+
+  MneLeads.submitLead({
+    name: nm,
+    phone: ph,
+    company: document.getElementById('cCompany').value,
+    quantity: document.getElementById('cQty').value,
+    email: document.getElementById('cEmail').value,
+    message: document.getElementById('cMsg').value,
+    source: 'contact-home'
+  }, { form: form });
   return false;
 }
 
