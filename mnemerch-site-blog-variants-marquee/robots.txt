@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://asmaniaqw.github.io/mnemerch-site/sitemap.xml
