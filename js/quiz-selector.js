@@ -1,5 +1,5 @@
 /* QuizProductSelector — клиентский подбор товаров для квиза
-   Адаптирован из ProductSelectorService платформы (ранжирование по отрасли/типу/бюджету/тиражу) */
+   Адаптирован из ProductSelectorService платформы (ранжирование по отрасли/типу/бюджету/срокам) */
 
 var QuizSelector = (function() {
 

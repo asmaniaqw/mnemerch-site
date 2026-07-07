@@ -18,7 +18,7 @@
     phone: 'Телефон / Telegram',
     email: 'Email',
     company: 'Компания',
-    quantity: 'Тираж',
+    quantity: 'Количество',
     budget: 'Бюджет',
     deadline: 'Срок',
     message: 'Задача',

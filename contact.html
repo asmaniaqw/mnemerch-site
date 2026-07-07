@@ -36,7 +36,7 @@
         </div>
         <div class="form-row">
           <div class="form-group"><label>Компания</label><input type="text" placeholder="Название компании" id="cCompany"></div>
-          <div class="form-group"><label>Тираж</label><input type="text" placeholder="Например, 100 шт." id="cQty"></div>
+          <div class="form-group"><label>Срок / дата мероприятия</label><input type="text" placeholder="Например, через 2 недели" id="cDeadline"></div>
         </div>
         <div class="form-group"><label>Email</label><input type="email" placeholder="email@company.ru" id="cEmail"></div>
         <div class="form-group"><label>Опишите задачу</label><textarea placeholder="Что нужно, бюджет, сроки, способ нанесения — любая информация поможет подготовить точный расчёт" id="cMsg"></textarea></div>
@@ -83,13 +83,13 @@
       <div class="faq-item" style="background:#fff;border:1px solid var(--border);border-radius:16px;margin-bottom:10px;overflow:hidden;">
         <button onclick="toggleFAQ(this)" style="width:100%;padding:18px 22px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:600;text-align:left;font-family:inherit;color:var(--text);">Какая минимальная сумма заказа? <span style="font-size:18px;transition:transform 0.3s;">+</span></button>
         <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.3s;padding:0 22px;">
-          <p style="padding-bottom:18px;font-size:14px;color:var(--text-muted);line-height:1.6;">Минимальная сумма заказа — 50 000 ₽. Минимальный тираж зависит от товара и метода нанесения (от 1 шт для DTF и лазерной гравировки до 500 шт для шелкографии).</p>
+          <p style="padding-bottom:18px;font-size:14px;color:var(--text-muted);line-height:1.6;">Минимальная сумма заказа — от 50 000 ₽. Конкретный состав, товары и способы нанесения подбираем под задачу, бюджет и сроки.</p>
         </div>
       </div>
       <div class="faq-item" style="background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;">
         <button onclick="toggleFAQ(this)" style="width:100%;padding:18px 22px;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:600;text-align:left;font-family:inherit;color:var(--text);">Как получить КП с мокапами? <span style="font-size:18px;transition:transform 0.3s;">+</span></button>
         <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height 0.3s;padding:0 22px;">
-          <p style="padding-bottom:18px;font-size:14px;color:var(--text-muted);line-height:1.6;">Просто пришлите техзадание: что нужно, тираж, бюджет, сроки. Мы подготовим КП с реальными мокапами вашего логотипа на выбранных товарах — обычно за 2 часа.</p>
+          <p style="padding-bottom:18px;font-size:14px;color:var(--text-muted);line-height:1.6;">Просто пришлите техзадание: что нужно, бюджет, сроки, нанесение. Мы подготовим КП с реальными мокапами вашего логотипа на выбранных товарах — обычно за 2 часа.</p>
         </div>
       </div>
     </div>
@@ -126,7 +126,7 @@ function submitContact(e) {
     name:nm,
     phone:ph,
     company:document.getElementById('cCompany').value,
-    quantity:document.getElementById('cQty').value,
+    deadline:document.getElementById('cDeadline').value,
     email:document.getElementById('cEmail').value,
     message:document.getElementById('cMsg').value,
     source:'contact-page'
