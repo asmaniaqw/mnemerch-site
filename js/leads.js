@@ -1,15 +1,17 @@
 /* ============================================
    MNEMERCH — единая обработка заявок
-   GitHub Pages: честный fallback в WhatsApp.
+   WhatsApp-режим: рабочая отправка через заполненное сообщение.
    Production: отправка в /api/lead с fallback в WhatsApp при ошибке.
+   Режим задаётся в js/site-config.js.
    ============================================ */
 (function () {
   'use strict';
 
-  var PHONE = '79082198800';
-  var TELEGRAM_URL = 'https://t.me/Tatyana_Arzamastceva';
-  var API_URL = 'api/lead';
-  var IS_GITHUB_PAGES = window.location.hostname.endsWith('github.io');
+  var CFG = window.MNE_CONFIG || {};
+  var PHONE = CFG.whatsappPhone || '79082198800';
+  var TELEGRAM_URL = CFG.telegramUrl || 'https://t.me/Tatyana_Arzamastceva';
+  var API_URL = CFG.leadApiUrl || '/api/lead';
+  var LEAD_MODE = CFG.leadMode || 'whatsapp';
 
   var LABELS = {
     name: 'Имя',
@@ -80,10 +82,10 @@
     options = options || {};
     var statusTarget = options.statusTarget || options.form || null;
 
-    if (IS_GITHUB_PAGES) {
+    if (LEAD_MODE !== 'api') {
       openWhatsApp(data);
       showStatus(statusTarget, 'Открыли WhatsApp с заполненным сообщением. Отправьте его, чтобы менеджер получил заявку.', 'success');
-      return Promise.resolve({ ok: true, mode: 'whatsapp' });
+      return Promise.resolve({ ok: true, mode: LEAD_MODE });
     }
 
     return fetch(API_URL, {
@@ -104,7 +106,7 @@
   }
 
   window.MneLeads = {
-    isGithubPages: function () { return IS_GITHUB_PAGES; },
+    getMode: function () { return LEAD_MODE; },
     buildLeadText: buildLeadText,
     showStatus: showStatus,
     requireConsent: requireConsent,

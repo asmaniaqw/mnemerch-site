@@ -4,27 +4,29 @@
 
 // --- Header / Footer Loading ---
 document.addEventListener('DOMContentLoaded', function () {
-  loadComponent('header-placeholder', 'components/header.html');
-  loadComponent('footer-placeholder', 'components/footer.html');
+  Promise.all([
+    loadComponent('header-placeholder', 'components/header.html'),
+    loadComponent('footer-placeholder', 'components/footer.html')
+  ]).then(function () {
+    afterComponentsLoaded();
+  });
 });
 
 function loadComponent(id, url) {
   const el = document.getElementById(id);
-  if (!el) return;
-  fetch(url)
+  if (!el) return Promise.resolve();
+
+  return fetch(url)
     .then(r => {
       if (!r.ok) throw new Error('Failed to load ' + url);
       return r.text();
     })
     .then(html => {
       el.outerHTML = html;
-      afterComponentsLoaded();
     })
-    .catch(() => {
-      // Fallback: even if header/footer fail to load, init page behavior
-      // so .anim content is not stuck invisible
+    .catch(error => {
+      console.error(error);
       el.outerHTML = '';
-      afterComponentsLoaded();
     });
 }
 
@@ -39,10 +41,15 @@ function afterComponentsLoaded() {
 // --- Header scroll shadow ---
 function initHeaderScroll() {
   const header = document.querySelector('.header');
-  if (!header) return;
-  window.addEventListener('scroll', function () {
+  if (!header || header.dataset.scrollBound === 'true') return;
+  header.dataset.scrollBound = 'true';
+
+  function updateHeaderState() {
     header.classList.toggle('scrolled', window.scrollY > 10);
-  });
+  }
+
+  updateHeaderState();
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
 }
 
 // --- Burger menu ---
@@ -51,28 +58,42 @@ function initBurgerMenu() {
   const nav = document.querySelector('.nav');
   if (!burger || !nav) return;
   if (burger.dataset.bound === 'true') return;
+
   burger.dataset.bound = 'true';
+  if (!nav.id) nav.id = 'site-nav';
+  burger.setAttribute('aria-controls', nav.id);
   burger.setAttribute('aria-expanded', 'false');
+
+  function closeMenu() {
+    document.body.classList.remove('nav-open');
+    burger.setAttribute('aria-expanded', 'false');
+  }
+
   burger.addEventListener('click', function () {
     const isOpen = document.body.classList.toggle('nav-open');
     burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
+
   nav.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      document.body.classList.remove('nav-open');
-      burger.setAttribute('aria-expanded', 'false');
-    });
+    link.addEventListener('click', closeMenu);
   });
+
   document.addEventListener('click', function (e) {
     if (!document.body.classList.contains('nav-open')) return;
     if (e.target.closest('.nav') || e.target.closest('.burger')) return;
-    document.body.classList.remove('nav-open');
-    burger.setAttribute('aria-expanded', 'false');
+    closeMenu();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
   });
 }
 
 // --- Smooth scroll for anchor links ---
 function initSmoothScroll() {
+  if (document.documentElement.dataset.smoothScrollBound === 'true') return;
+  document.documentElement.dataset.smoothScrollBound = 'true';
+
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
@@ -81,9 +102,9 @@ function initSmoothScroll() {
       if (target) {
         e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // Close mobile menu if open
-        const nav = document.querySelector('.nav');
-        if (nav && nav.style.display === 'flex') nav.style.display = 'none';
+        document.body.classList.remove('nav-open');
+        const burger = document.querySelector('.burger');
+        if (burger) burger.setAttribute('aria-expanded', 'false');
       }
     });
   });
@@ -91,15 +112,21 @@ function initSmoothScroll() {
 
 // --- Scroll animations (IntersectionObserver) ---
 function initScrollAnimations() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.anim').forEach(function (el) { el.classList.add('show'); });
+    return;
+  }
+
   const observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.06 });
 
-  document.querySelectorAll('.anim').forEach(function (el) {
+  document.querySelectorAll('.anim:not(.show)').forEach(function (el) {
     observer.observe(el);
   });
 }
@@ -118,7 +145,7 @@ function setActiveNav() {
   });
 }
 
-// --- Simple form handler (console log + alert) ---
+// --- Legacy form handler. New lead forms use js/leads.js. ---
 function handleForm(formId, fields, successMsg) {
   return function (e) {
     e.preventDefault();

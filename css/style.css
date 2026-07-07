@@ -1246,3 +1246,97 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
 .lead-status.error { background: rgba(199, 65, 65, 0.1); color: #9f2f2f; }
 .lead-status.info { background: rgba(212, 163, 115, 0.14); color: var(--text); }
 @media (max-width: 620px) { .form-row { grid-template-columns: 1fr; } }
+
+/* Cookie consent */
+.cookie-consent {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 18px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 18px 60px rgba(25, 25, 25, 0.18);
+  backdrop-filter: blur(14px);
+}
+.cookie-consent__text strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 800;
+}
+.cookie-consent__text p {
+  margin: 0 0 6px;
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.45;
+}
+.cookie-consent__text a,
+.cookie-consent__link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+.cookie-consent__settings {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding-top: 4px;
+}
+.cookie-consent__settings[hidden] {
+  display: none;
+}
+.cookie-consent__settings label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-light);
+  font-size: 13px;
+}
+.cookie-consent__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.cookie-consent__actions .btn {
+  min-height: 42px;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+.cookie-consent__link {
+  min-height: 42px;
+  padding: 10px 4px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+@media (max-width: 760px) {
+  .cookie-consent {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    grid-template-columns: 1fr;
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .cookie-consent__actions {
+    justify-content: stretch;
+  }
+  .cookie-consent__actions .btn,
+  .cookie-consent__link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
