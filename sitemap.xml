@@ -41,11 +41,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://asmaniaqw.github.io/mnemerch-site/blog/post.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://asmaniaqw.github.io/mnemerch-site/p/2.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -90,4 +85,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+
+<url><loc>https://asmaniaqw.github.io/mnemerch-site/blog/novogodnie-korporativnye-podarki.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://asmaniaqw.github.io/mnemerch-site/blog/dtf-vs-shelkografiya.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://asmaniaqw.github.io/mnemerch-site/blog/oshibki-pri-zakaze-mercha.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://asmaniaqw.github.io/mnemerch-site/blog/trendy-korporativnogo-mercha-2026.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://asmaniaqw.github.io/mnemerch-site/blog/byudzhet-na-merch-dlya-meropriyatiya.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<url><loc>https://asmaniaqw.github.io/mnemerch-site/blog/welcome-pakety-dlya-novyh-sotrudnikov.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
