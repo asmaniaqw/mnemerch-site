@@ -1009,11 +1009,8 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
   .filter-cat a { padding: 12px 14px; }
   .lightbox-nav { width: 44px; height: 44px; }
 }
-/* Hide less important content on mobile */
+/* Older non-slider hero cleanup for small screens */
 @media (max-width: 860px) {
-  /* Hide "Как мы работаем" card on mobile - too much text */
-  .hero-grid > div:last-child { display: none; }
-  
   /* Hide some category cards - show only first 6 on mobile */
   .cat-card:nth-child(n+7) { display: none; }
   
@@ -1338,5 +1335,118 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+}
+
+/* --- Block 2: mobile adaptive fixes --- */
+@media (max-width: 860px) {
+  .burger {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  body.nav-open .nav {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .product-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-body .name {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .product-body .meta {
+    gap: 8px;
+  }
+
+  .product-body .btn-request,
+  .btn-request {
+    min-height: 44px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cat-pills {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cat-pills span {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-consent {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .carousel-dots {
+    display: none;
+  }
+
+  .carousel-counter {
+    display: block;
+  }
+}
+
+@media (max-width: 520px) {
+  .cookie-consent {
+    max-height: calc(100svh - 24px);
+    overflow-y: auto;
+  }
+
+  .cookie-consent__text p {
+    font-size: 13px;
+  }
+
+  .cookie-consent__settings {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 380px) {
+  .client-logo-grid {
+    gap: 8px;
+  }
+
+  .client-logo-card {
+    min-height: 74px;
+    padding: 12px 10px;
   }
 }

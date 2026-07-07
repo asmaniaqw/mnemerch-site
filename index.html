@@ -321,12 +321,12 @@
     width: 100%;
     max-width: 100%;
     min-height: calc(100svh - var(--header-h));
-    padding: 28px 20px 86px;
+    padding: 24px 18px 86px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: stretch;
-    gap: 15px;
+    gap: 13px;
     text-align: center;
   }
 
@@ -339,8 +339,8 @@
   .hero-eyebrow {
     max-width: 100%;
     justify-content: center;
-    margin: 0 auto 16px;
-    padding: 7px 12px;
+    margin: 0 auto 13px;
+    padding: 7px 11px;
     font-size: 10px;
     line-height: 1.25;
     letter-spacing: 1px;
@@ -350,8 +350,8 @@
   .hero-copy h1,
   .hero-slide-title {
     max-width: 100%;
-    margin: 0 auto 14px;
-    font-size: clamp(30px, 9.6vw, 38px);
+    margin: 0 auto 12px;
+    font-size: clamp(28px, 8.7vw, 34px);
     line-height: 1.02;
     letter-spacing: -0.9px;
     text-align: center;
@@ -362,17 +362,17 @@
 
   .hero-copy p {
     max-width: 100%;
-    margin: 0 auto 18px;
+    margin: 0 auto 15px;
     color: rgba(255,255,255,0.88);
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.45;
     text-align: center;
   }
 
   .hero-min-card {
     max-width: 100%;
-    margin: 0 0 18px;
-    padding: 15px 16px;
+    margin: 0 0 14px;
+    padding: 13px 14px;
     border-radius: 20px;
     text-align: left;
     background: rgba(255,255,255,0.17);
@@ -392,21 +392,21 @@
   .hero-slider-actions {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 12px;
   }
 
   .hero-slider-actions .btn {
     width: 100%;
     justify-content: center;
-    min-height: 56px;
-    padding: 16px 20px;
+    min-height: 52px;
+    padding: 14px 18px;
     font-size: 15px;
   }
 
   .hero-quick-links {
     justify-content: center;
-    gap: 10px 16px;
+    gap: 8px 14px;
     margin-bottom: 0;
   }
 
@@ -422,7 +422,7 @@
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: 15px 16px;
+    padding: 13px 14px;
     border-radius: 22px;
     text-align: left;
     background:
@@ -434,14 +434,14 @@
   .hero-side-panel .panel-label {
     font-size: 10px;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
-  .hero-side-panel ul { gap: 9px; }
+  .hero-side-panel ul { gap: 7px; }
 
   .hero-side-panel li {
-    font-size: 13px;
-    line-height: 1.42;
+    font-size: 12px;
+    line-height: 1.38;
     gap: 9px;
   }
 
@@ -451,13 +451,14 @@
   }
 
   .hero-arrow {
-    width: 34px;
-    height: 34px;
-    font-size: 26px;
-    top: 42%;
+    width: 44px;
+    height: 44px;
+    font-size: 30px;
+    top: calc(var(--header-h) + 34svh);
     bottom: auto;
     transform: translateY(-50%);
-    background: rgba(20,20,20,0.22);
+    background: rgba(20,20,20,0.28);
+    border-color: rgba(255,255,255,0.36);
   }
 
   .hero-arrow:hover { transform: translateY(-50%) scale(1.04); }
@@ -929,14 +930,20 @@ loadProducts();
   var nextBtn = slider.querySelector('.hero-arrow-next');
   var current = 0;
   var intervalTime = 20000;
-  var timer;
+  var timer = null;
+  var userStoppedAutoplay = false;
+  var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   if (!slides.length) return;
 
   function showSlide(index) {
     current = (index + slides.length) % slides.length;
     slides.forEach(function(s, i) { s.classList.toggle('active', i === current); });
-    dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+    dots.forEach(function(d, i) {
+      var isActive = i === current;
+      d.classList.toggle('active', isActive);
+      d.setAttribute('aria-current', isActive ? 'true' : 'false');
+    });
   }
 
   function nextSlide() {
@@ -947,33 +954,43 @@ loadProducts();
     showSlide(current - 1);
   }
 
-  function restartAutoplay() {
-    clearInterval(timer);
+  function stopAutoplayByUser() {
+    userStoppedAutoplay = true;
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  function startAutoplay() {
+    if (prefersReducedMotion || userStoppedAutoplay || slides.length < 2) return;
+    if (timer) clearInterval(timer);
     timer = setInterval(nextSlide, intervalTime);
   }
 
   dots.forEach(function(dot) {
     dot.addEventListener('click', function() {
+      stopAutoplayByUser();
       showSlide(parseInt(this.dataset.slide, 10) || 0);
-      restartAutoplay();
     });
   });
 
   if (prevBtn) {
     prevBtn.addEventListener('click', function() {
+      stopAutoplayByUser();
       prevSlide();
-      restartAutoplay();
     });
   }
 
   if (nextBtn) {
     nextBtn.addEventListener('click', function() {
+      stopAutoplayByUser();
       nextSlide();
-      restartAutoplay();
     });
   }
 
-  restartAutoplay();
+  showSlide(0);
+  startAutoplay();
 })();
 </script>
 </body>
