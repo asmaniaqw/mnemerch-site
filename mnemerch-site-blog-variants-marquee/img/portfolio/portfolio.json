@@ -1,0 +1,1006 @@
+{
+  "cases": [
+    {
+      "id": "p001",
+      "page": 1,
+      "images": [
+        "p001_1.png",
+        "p001_2.jpeg"
+      ],
+      "thumb": "p001_1.png",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p002",
+      "page": 2,
+      "images": [
+        "p002_1.jpeg"
+      ],
+      "thumb": "p002_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p003",
+      "page": 3,
+      "images": [
+        "p003_1.jpeg"
+      ],
+      "thumb": "p003_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p004",
+      "page": 4,
+      "images": [
+        "p004_1.jpeg"
+      ],
+      "thumb": "p004_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p005",
+      "page": 5,
+      "images": [
+        "p005_1.jpeg"
+      ],
+      "thumb": "p005_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p006",
+      "page": 6,
+      "images": [
+        "p006_1.jpeg"
+      ],
+      "thumb": "p006_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p007",
+      "page": 7,
+      "images": [
+        "p007_1.jpeg"
+      ],
+      "thumb": "p007_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p008",
+      "page": 8,
+      "images": [
+        "p008_1.jpeg"
+      ],
+      "thumb": "p008_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p009",
+      "page": 9,
+      "images": [
+        "p009_1.jpeg",
+        "p009_2.jpeg"
+      ],
+      "thumb": "p009_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p010",
+      "page": 10,
+      "images": [
+        "p010_1.jpeg"
+      ],
+      "thumb": "p010_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p011",
+      "page": 11,
+      "images": [
+        "p011_1.jpeg"
+      ],
+      "thumb": "p011_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p012",
+      "page": 12,
+      "images": [
+        "p012_1.jpeg"
+      ],
+      "thumb": "p012_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p013",
+      "page": 13,
+      "images": [
+        "p013_1.jpeg"
+      ],
+      "thumb": "p013_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p014",
+      "page": 14,
+      "images": [
+        "p014_1.jpeg"
+      ],
+      "thumb": "p014_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p015",
+      "page": 15,
+      "images": [
+        "p015_1.jpeg"
+      ],
+      "thumb": "p015_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p016",
+      "page": 16,
+      "images": [
+        "p016_1.jpeg",
+        "p016_2.jpeg"
+      ],
+      "thumb": "p016_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p017",
+      "page": 17,
+      "images": [
+        "p017_1.jpeg"
+      ],
+      "thumb": "p017_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p018",
+      "page": 18,
+      "images": [
+        "p018_1.jpeg",
+        "p018_2.jpeg"
+      ],
+      "thumb": "p018_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p019",
+      "page": 19,
+      "images": [
+        "p019_1.jpeg",
+        "p019_2.jpeg"
+      ],
+      "thumb": "p019_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p020",
+      "page": 20,
+      "images": [
+        "p020_1.jpeg"
+      ],
+      "thumb": "p020_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p021",
+      "page": 21,
+      "images": [
+        "p021_1.jpeg"
+      ],
+      "thumb": "p021_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p022",
+      "page": 22,
+      "images": [
+        "p022_1.jpeg"
+      ],
+      "thumb": "p022_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p023",
+      "page": 23,
+      "images": [
+        "p023_1.jpeg"
+      ],
+      "thumb": "p023_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p024",
+      "page": 24,
+      "images": [
+        "p024_1.jpeg",
+        "p024_2.jpeg"
+      ],
+      "thumb": "p024_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p025",
+      "page": 25,
+      "images": [
+        "p025_1.jpeg"
+      ],
+      "thumb": "p025_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p026",
+      "page": 26,
+      "images": [
+        "p026_1.jpeg",
+        "p026_2.jpeg"
+      ],
+      "thumb": "p026_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p027",
+      "page": 27,
+      "images": [
+        "p027_1.jpeg"
+      ],
+      "thumb": "p027_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p028",
+      "page": 28,
+      "images": [
+        "p028_1.jpeg"
+      ],
+      "thumb": "p028_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p029",
+      "page": 29,
+      "images": [
+        "p029_1.jpeg",
+        "p029_2.jpeg",
+        "p029_3.jpeg",
+        "p029_4.jpeg"
+      ],
+      "thumb": "p029_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p030",
+      "page": 30,
+      "images": [
+        "p030_1.jpeg"
+      ],
+      "thumb": "p030_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p031",
+      "page": 31,
+      "images": [
+        "p031_1.jpeg"
+      ],
+      "thumb": "p031_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p032",
+      "page": 32,
+      "images": [
+        "p032_1.jpeg"
+      ],
+      "thumb": "p032_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p033",
+      "page": 33,
+      "images": [
+        "p033_1.jpeg",
+        "p033_2.jpeg"
+      ],
+      "thumb": "p033_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p034",
+      "page": 34,
+      "images": [
+        "p034_1.jpeg",
+        "p034_2.jpeg"
+      ],
+      "thumb": "p034_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p035",
+      "page": 35,
+      "images": [
+        "p035_1.jpeg"
+      ],
+      "thumb": "p035_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p036",
+      "page": 36,
+      "images": [
+        "p036_1.jpeg"
+      ],
+      "thumb": "p036_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p037",
+      "page": 37,
+      "images": [
+        "p037_1.jpeg",
+        "p037_2.jpeg"
+      ],
+      "thumb": "p037_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p038",
+      "page": 38,
+      "images": [
+        "p038_1.jpeg"
+      ],
+      "thumb": "p038_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p039",
+      "page": 39,
+      "images": [
+        "p039_1.jpeg",
+        "p039_2.jpeg"
+      ],
+      "thumb": "p039_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p040",
+      "page": 40,
+      "images": [
+        "p040_1.jpeg",
+        "p040_2.jpeg"
+      ],
+      "thumb": "p040_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p041",
+      "page": 41,
+      "images": [
+        "p041_1.jpeg",
+        "p041_2.jpeg"
+      ],
+      "thumb": "p041_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p042",
+      "page": 42,
+      "images": [
+        "p042_1.jpeg",
+        "p042_2.jpeg"
+      ],
+      "thumb": "p042_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p043",
+      "page": 43,
+      "images": [
+        "p043_1.jpeg"
+      ],
+      "thumb": "p043_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p044",
+      "page": 44,
+      "images": [
+        "p044_1.jpeg"
+      ],
+      "thumb": "p044_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p045",
+      "page": 45,
+      "images": [
+        "p045_1.jpeg",
+        "p045_2.jpeg"
+      ],
+      "thumb": "p045_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p046",
+      "page": 46,
+      "images": [
+        "p046_1.jpeg"
+      ],
+      "thumb": "p046_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p047",
+      "page": 47,
+      "images": [
+        "p047_1.jpeg",
+        "p047_2.jpeg"
+      ],
+      "thumb": "p047_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p048",
+      "page": 48,
+      "images": [
+        "p048_1.jpeg"
+      ],
+      "thumb": "p048_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p049",
+      "page": 49,
+      "images": [
+        "p049_1.jpeg"
+      ],
+      "thumb": "p049_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p050",
+      "page": 50,
+      "images": [
+        "p050_1.jpeg",
+        "p050_2.jpeg"
+      ],
+      "thumb": "p050_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p051",
+      "page": 51,
+      "images": [
+        "p051_1.jpeg",
+        "p051_2.jpeg",
+        "p051_3.jpeg"
+      ],
+      "thumb": "p051_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p052",
+      "page": 52,
+      "images": [
+        "p052_1.jpeg",
+        "p052_2.jpeg"
+      ],
+      "thumb": "p052_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p053",
+      "page": 53,
+      "images": [
+        "p053_1.jpeg",
+        "p053_2.jpeg"
+      ],
+      "thumb": "p053_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p054",
+      "page": 54,
+      "images": [
+        "p054_1.jpeg"
+      ],
+      "thumb": "p054_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p055",
+      "page": 55,
+      "images": [
+        "p055_1.jpeg",
+        "p055_2.jpeg"
+      ],
+      "thumb": "p055_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p056",
+      "page": 56,
+      "images": [
+        "p056_1.jpeg"
+      ],
+      "thumb": "p056_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p057",
+      "page": 57,
+      "images": [
+        "p057_1.jpeg"
+      ],
+      "thumb": "p057_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p058",
+      "page": 58,
+      "images": [
+        "p058_1.jpeg"
+      ],
+      "thumb": "p058_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p059",
+      "page": 59,
+      "images": [
+        "p059_1.jpeg"
+      ],
+      "thumb": "p059_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p060",
+      "page": 60,
+      "images": [
+        "p060_1.jpeg"
+      ],
+      "thumb": "p060_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p061",
+      "page": 61,
+      "images": [
+        "p061_1.jpeg"
+      ],
+      "thumb": "p061_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p062",
+      "page": 62,
+      "images": [
+        "p062_1.jpeg"
+      ],
+      "thumb": "p062_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p063",
+      "page": 63,
+      "images": [
+        "p063_1.jpeg"
+      ],
+      "thumb": "p063_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p064",
+      "page": 64,
+      "images": [
+        "p064_1.jpeg"
+      ],
+      "thumb": "p064_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    },
+    {
+      "id": "p065",
+      "page": 65,
+      "images": [
+        "p065_1.jpeg",
+        "p065_2.jpeg"
+      ],
+      "thumb": "p065_1.jpeg",
+      "client": "",
+      "industry": "",
+      "products": [],
+      "technologies": [],
+      "task": "",
+      "solution": "",
+      "result": ""
+    }
+  ],
+  "total": 65
+}
